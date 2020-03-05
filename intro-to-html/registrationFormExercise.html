@@ -12,21 +12,21 @@
     <label for="firstName"">First Name: </label>
     <input type="text" placeholder="John" id="firstName" required>
     <label for="lastName"">Last Name: </label>
-    <input type="text" placeholder="Smith" id="lastName" required>
+    <input type="text" placeholder="Smith" id="lastName" required><br>
 
     <!-- Gender radio buttons -->
-    <label for="male">Male </label>
+    <label for="male">Male</label>
     <input type="radio" name="genderChoice" id="male">
-    <label for="female">Female </label>
+    <label for="female">Female</label>
     <input type="radio" name="genderChoice" id="female">
-    <label for="other">Other </label>
-    <input type="radio" name="genderChoice" id="other">
+    <label for="other">Other</label>
+    <input type="radio" name="genderChoice" id="other"><br>
 
     <!-- Email & Password -->
     <label for="email">Email: </label>
     <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
     <label for="password">Password: </label>
-    <input type="password" name="password" id="password" required>
+    <input type="password" name="password" id="password" required minlength="8"><br>
 
     <!-- Birthday -->
     <label for="birthday">Birthday: </label>
@@ -42,8 +42,28 @@
       <option value="August">August</option>
     </select>
     <select name="day" id="day">
-      <option value=""></option>
+      <option value="">Day</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
+    <select name="year" id="year">
+      <option value="">Year</option>
+      <option value="1994">1994</option>
+      <option value="1995">1995</option>
+      <option value="1996">1996</option>
+      <option value="1997">1997</option>
+      <option value="1998">1998</option>
+      <option value="1999">1999</option>
+    </select><br>
+
+    <!-- Agree to the terms  -->
+    <label for="terms">I agree to the terms and conditions: </label><input type="checkbox" required><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
   </form>
 
 
