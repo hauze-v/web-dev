@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Do you prefer cats or dogs?</p>
+
+    <form action="">
+        <label for="dogs">Dogs: </label>
+        <!-- The name attribute here groups this input with the below input so only one radio button can be selected -->
+        <!-- The id attribute here basically assigns this input and the label above together -->
+        <input name="petChoice" id="dogs" type="radio" value="DOGS">
+
+        <label for="cats">Cats: </label>
+        <input name="petChoice" id="cats" type="radio" value="CATS">
+
+        <p>What's your current mood?</p>
+        <select name="mood" id="">
+            <option value="sad">:(</option>
+            <option value="neutral">-_-</option>
+            <option value="happy">:)</option>
+        </select>
+
+        <!-- Name attributes are used to send data through the http request -->
+        <br><textarea name="paragraph" id="" cols="30" rows="10"></textarea>
+
+        <button>Go!</button>
+    </form>
+
+
+</body>
+</html>

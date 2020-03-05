@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Register</h1>
+  <form action="">
+    <!-- First and Last name text fields -->
+    <label for="firstName"">First Name: </label>
+    <input type="text" placeholder="John" id="firstName" required>
+    <label for="lastName"">Last Name: </label>
+    <input type="text" placeholder="Smith" id="lastName" required>
+
+    <!-- Gender radio buttons -->
+    <label for="male">Male </label>
+    <input type="radio" name="genderChoice" id="male">
+    <label for="female">Female </label>
+    <input type="radio" name="genderChoice" id="female">
+    <label for="other">Other </label>
+    <input type="radio" name="genderChoice" id="other">
+
+    <!-- Email & Password -->
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" required>
+
+    <!-- Birthday -->
+    <label for="birthday">Birthday: </label>
+    <select name="month" id="month">
+      <option value="">Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+    </select>
+    <select name="day" id="day">
+      <option value=""></option>
+    </select>
+  </form>
+
+
+</body>
+</html>
