@@ -15,55 +15,72 @@
     <input type="text" placeholder="Smith" id="lastName" required><br>
 
     <!-- Gender radio buttons -->
-    <label for="male">Male</label>
-    <input type="radio" name="genderChoice" id="male">
-    <label for="female">Female</label>
-    <input type="radio" name="genderChoice" id="female">
-    <label for="other">Other</label>
-    <input type="radio" name="genderChoice" id="other"><br>
+    <div>
+      <label for="male">Male</label>
+      <input type="radio" name="genderChoice" id="male">
+      <label for="female">Female</label>
+      <input type="radio" name="genderChoice" id="female">
+      <label for="other">Other</label>
+      <input type="radio" name="genderChoice" id="other">
+    </div>
 
     <!-- Email & Password -->
-    <label for="email">Email: </label>
-    <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="password" required minlength="8"><br>
+    <div>
+      <label for="email">
+        Email:
+        <input type="email" name="email" id="email" placeholde r="abc@gmail.com" required>
+      </label>
+      <label for="password">
+        Password:
+        <input type="password" name="password" id="password" pattern=.{5,10} required title="Password must be between 5 and 10 characters.">
+      </label>
+    </div>
 
     <!-- Birthday -->
-    <label for="birthday">Birthday: </label>
-    <select name="month" id="month">
-      <option value="">Month</option>
-      <option value="January">January</option>
-      <option value="February">February</option>
-      <option value="March">March</option>
-      <option value="April">April</option>
-      <option value="May">May</option>
-      <option value="June">June</option>
-      <option value="July">July</option>
-      <option value="August">August</option>
-    </select>
-    <select name="day" id="day">
-      <option value="">Day</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <select name="year" id="year">
-      <option value="">Year</option>
-      <option value="1994">1994</option>
-      <option value="1995">1995</option>
-      <option value="1996">1996</option>
-      <option value="1997">1997</option>
-      <option value="1998">1998</option>
-      <option value="1999">1999</option>
-    </select><br>
+    <div>
+      <label for="birthday">
+        Birthday:
+        <select name="month" id="month">
+          <option value="">Month</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+        </select>
+        <select name="day" id="day">
+          <option value="">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select name="year" id="year">
+          <option value="">Year</option>
+          <option value="1994">1994</option>
+          <option value="1995">1995</option>
+          <option value="1996">1996</option>
+          <option value="1997">1997</option>
+          <option value="1998">1998</option>
+          <option value="1999">1999</option>
+        </select>
+      </label>
+      </div>
 
     <!-- Agree to the terms  -->
-    <label for="terms">I agree to the terms and conditions: </label><input type="checkbox" required><br>
+    <div>
+      <label for="terms">I agree to the terms and conditions: </label><input type="checkbox" required>
+    </div>
 
     <!-- Submit -->
-    <button type="submit">Submit</button>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+
   </form>
 
 
