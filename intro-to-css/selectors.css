@@ -1,0 +1,50 @@
+/* Element Selector */
+body {
+  background: orange;
+}
+
+/* id Selector */
+#special {
+  background: yellow;
+}
+
+/* Class Selector */
+.completed {
+  text-decoration: line-through;
+}
+
+/* Star Selector */
+* {
+  border: 1px solid lightgrey;
+}
+
+/* Descendant Selector
+   This selects every anchor tag that's inside an li */
+li a {
+  color: red;
+}
+
+/* Adjacent Selector (siblings)
+   Selects elements that come after the first element */
+h4 + ul {
+  border: 4px solid red;
+}
+
+/* Attribute Selector */
+a[href="http://www.google.com"] {
+  background: blue;
+}
+
+input[type=text] {
+  border: 4px dotted gray;
+}
+
+/* nth of type
+   Selects the "3rd" of a given group */
+ul:nth-of-type(3) {
+  background: purple;
+}
+
+ul:nth-of-type(even) {
+  background: purple;
+}
