@@ -1,0 +1,14 @@
+/* Element Selector */
+body {
+  background: orange;
+}
+
+/* id Selector */
+#special {
+  background: yellow;
+}
+
+/* Class Selector */
+.completed {
+  text-decoration: line-through;
+}
