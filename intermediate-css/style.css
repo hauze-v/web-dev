@@ -9,7 +9,7 @@ h1 {
 
 /* font-size */
 h1{
-  font-size: 200px;
+  font-size: 20px;
 }
 
 /* This is a dynamic way to change font-size. It makes the span 2x as large as the parent element font-size */
@@ -17,12 +17,30 @@ span {
   font-size: 2.0em; 
 }
 
-
 /* font-weight */
+p {
+  font-weight: bold;
+}
 
-/* line-height */
+/* line-height (space between lines) */
+p {
+  line-height: 1.5;
+}
 
 /* text-align */
+h1 {
+  text-align: right;
+}
 
-/* text-decoration */
+p {
+  text-align: center;
+}
 
+/* text-decoration (underline, strikethrough, or overline) */
+p {
+  text-decoration: underline;
+}
+
+h1 {
+  text-decoration: line-through;
+}
