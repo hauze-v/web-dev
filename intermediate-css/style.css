@@ -1,0 +1,28 @@
+/* font-family */
+p {
+  font-family: "Arial";
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* font-size */
+h1{
+  font-size: 200px;
+}
+
+/* This is a dynamic way to change font-size. It makes the span 2x as large as the parent element font-size */
+span {
+  font-size: 2.0em; 
+}
+
+
+/* font-weight */
+
+/* line-height */
+
+/* text-align */
+
+/* text-decoration */
+
