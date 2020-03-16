@@ -1,10 +1,17 @@
 /* font-family */
+/* 
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Indie Flower', cursive;
+
+ */
 p {
-  font-family: "Arial";
+  font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Indie Flower', cursive;
 }
 
 /* font-size */
@@ -19,7 +26,7 @@ span {
 
 /* font-weight */
 p {
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 /* line-height (space between lines) */
