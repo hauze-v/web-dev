@@ -1,0 +1,29 @@
+/* border color: #bdc3c7
+data color: #3498db
+h2 color: #2c3e50
+
+font: source sans pro */
+
+body {
+    border: 20px solid #bdc3c7;
+    width: 960px;
+    margin: auto;
+    padding: 30px;
+    font-family: 'Source Sans Pro';
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+div p:nth-of-type(1) {
+    border-left: 5px solid #bdc3c7;
+    padding-left: 5px;
+}
+
+.Date {
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
