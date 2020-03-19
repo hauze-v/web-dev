@@ -6,8 +6,8 @@ font: source sans pro */
 
 body {
     border: 20px solid #bdc3c7;
-    width: 960px;
-    margin: auto;
+    max-width: 960px;
+    margin: 20px auto;
     padding: 30px;
     font-family: 'Source Sans Pro';
 }
@@ -17,7 +17,7 @@ h2 {
     font-size: 30px;
 }
 
-div p:nth-of-type(1) {
+.quote {
     border-left: 5px solid #bdc3c7;
     padding-left: 5px;
 }
