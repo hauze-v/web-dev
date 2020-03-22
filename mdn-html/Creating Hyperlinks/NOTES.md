@@ -22,3 +22,25 @@ An absolute URL will always point to the same location, no matter where it's use
 
 Relative URL:
 Points to a location that is relative to the file you are linking from.
+
+## Link best practices ##
+Use clear link wording
+Include keywords in your link text to effectively describe what is being linked to
+
+Other tips:
+Don't repeat the URL as part of the link text - URLs look ugly, and sound even uglier when a screen reader readst them out letter by letter.
+Don't say "link" or "links to" in the link text -it's just noise. Screen readers tell people there's a link.
+Keep your link label as short as possible - long links especially annoy screen reader users, who have to hear the whole thing read out.
+Minimize instances where mulitple copies of the same text are linked to different places.
+
+## Use relative links whereever possible ##
+Lot easier to scan your code
+More efficient as it requires less work by your browser.
+
+## Linking to non-HTML resources - leave clear signposts ##
+When linking to a resource that will be downloaded (like a PDF or Word document) or something that will be streamed (like video or audio) or something with an unexpected effect (opens popup window, or Flash movie), you should add clear wording to reduce any confusion. It can be quite annoying for example:
+Have low bandwidth and click a download link
+Don't have Flash player installed
+
+## Use the download attribute when linking to a download ##
+You can use the download attribute to provide a default save filename.
