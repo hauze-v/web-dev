@@ -44,3 +44,7 @@ Don't have Flash player installed
 
 ## Use the download attribute when linking to a download ##
 You can use the download attribute to provide a default save filename.
+
+## Email Links ##
+You can use mailto: in the href attribute to automatically open the user's email client when they click the link
+Additionally, you can use URL query notation to add a cc, bcc, subject, and body content to the email
