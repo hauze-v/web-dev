@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos</title>
+</head>
+<body>
+
+  <!-- This might not play on all broswers -->
+  <h2>Below is simple video example</h2>
+  <video src="rabbit320.mp4" controls>
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to theh video</a> instead.</p>
+  </video>
+
+ <!-- Taking the src attribute out and placing source elements below, we can support additional browsers and codecs -->
+ <!-- It's important to include the MIME type attribute so the browser knows the file type and can skip without having to try and load it to see if it supports -->
+ <h2>Below is simple video example</h2>
+ <video controls>
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to theh video</a> instead.</p>
+ </video>
+
+ <!-- Other noteworthy attributes are: note the poster links to an image path for the splash screen of the video  -->
+ <video controls autoplay loop muted poster="images/rabbit">
+  <source src="rabbit320.mp4" type="video/mp4">
+  <source src="rabbit320.webm" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to theh video</a> instead.</p>
+</video>
+
+</body>
+</html>
