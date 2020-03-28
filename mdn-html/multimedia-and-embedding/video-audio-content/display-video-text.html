@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to display video text tracks</title>
+</head>
+<body>
+  
+  <!-- WebVTT or web video text track files are used to display subtitles, captions, and timed descriptions over audio or video media -->
+  <video>
+    <source src="example.mp4" type="video/mp4">
+    <source src="example.webm" type="video/webm">
+    <track  kind="subtitles" src="subtiles_en.vtt" srclang="en">
+  </video>
+
+  <!-- Note that you must supply the .vtt file which contains the text and metadata around time -->
+  <!-- Note also that you must give the kind attr for subtitles / captions / timed desriptions -->
+  <!-- Note lastly that you should specifiy the language of the source .vtt file text with srclang attr -->
+  
+</body>
+</html>
