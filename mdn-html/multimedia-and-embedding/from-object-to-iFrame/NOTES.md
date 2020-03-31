@@ -28,4 +28,4 @@ However, you are unlikely to use these elements very much -- Applets haven't bee
 PDFs were a necessary stepping stone between paper and digital, but they pose many accessibility challenges and can be hard to read on small screens.
 It's much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
 
-## The case against plugins ## 
+# Adding vector graphics to the Web #
