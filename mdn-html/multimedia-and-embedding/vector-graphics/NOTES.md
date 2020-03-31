@@ -24,3 +24,16 @@ So, with all the advantages of SVG, why would anyone want to use raster graphics
 Raster graphics are arguably better for complex precision images such as photographs, for the reasons described above. It's not written in the docs, but I image SVG and vector images shine through when it comes to simple graphics and art that you'd like to annimate.
 
 ## Adding SVG to your pages ##
+Quickest way to add an SVG to your page is to use an <img> element and simply reference it in the src attribute. Note that you'll need height and width
+
+Pros:
+  It's quick, familiar image syntax with built-in text equivalent available with the alt attribute
+  You can make the image into a hyperlink easily by nesting the <img> element inside an <a> anchor element
+  The SVG file can be cached by the browser, resulitng in faster loading times for any page that uses the image loaded in the future
+
+Cons:
+  You cannot manipulate the image with JavaScript
+  If you want to control the SVG content with CSS, you must include inline CSS styles in your SVG code.
+  You cannot restyle the image with CSS psseudoclasses (like :focus)
+
+

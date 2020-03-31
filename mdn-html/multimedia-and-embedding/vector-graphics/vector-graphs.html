@@ -8,7 +8,9 @@
   <title>Vector Graphs</title>
 </head>
 <body>
-  
+
+  <!-- SVG == Scalable Vector Graphs -->
+
   <!-- Simple SVG (xml) exxample -->
   <svg version="1.1"
        baseProfile="full"
@@ -17,6 +19,21 @@
     <rect width="100%" height="100%" fill="black"></rect>
     <circle cx="150" cy="100" r="90" fill="blue" />
   </svg>
+
+  <!-- Quick way to add SVG to web page through <img> element -->
+  <img 
+    src="equilateral.svg" 
+    alt="triangle where all three sides are equal"
+    height="87"
+    width="100">
+
+  <!-- For cross-browser support use both the src and srcset attributes-->
+  <img 
+    src="equilater.png" 
+    alt="triangle where all three sides are equal"
+    srcset="equilateral.svg"
+    height="87" width="100">
+
 
 </body>
 </html>
