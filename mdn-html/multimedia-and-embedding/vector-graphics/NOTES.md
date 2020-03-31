@@ -11,3 +11,16 @@ Vector image files are much lighter than their raster equivalents, because they 
 
 ## What is SVG? ##
 SVG is an XML-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your images. 
+
+Vector images using SVG have some additional advantages over raster images:
+  Text in vector images remains accessible (which also benefits your SEO)
+  SVGs lend themselves well to styling/scripting, because each component of the image is an element that can be styled via CSS or scripted via JavaScript
+
+So, with all the advantages of SVG, why would anyone want to use raster graphics over vector? Well, SVG does have some disadvantages:
+  SVG can get complicated very quickly, meaning that file sizes can grow; complex SVGs can also take significant processing time in the browser
+  SVG can be harder to create than raster images, depending on what kind of image you're going for
+  SVG is not supported by older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site
+
+Raster graphics are arguably better for complex precision images such as photographs, for the reasons described above. It's not written in the docs, but I image SVG and vector images shine through when it comes to simple graphics and art that you'd like to annimate.
+
+## Adding SVG to your pages ##
