@@ -36,4 +36,30 @@ Cons:
   If you want to control the SVG content with CSS, you must include inline CSS styles in your SVG code.
   You cannot restyle the image with CSS psseudoclasses (like :focus)
 
+For cross-browser support:
+  You can reference a PNG or JPG from your src attribute and then use a srcset attribute (which only recent browsers recognize) to reference the SVG.
+  This being the case, only supporting browsers will load the SVG -- while older browsers will load the PNG instead
+
+How to include SVG code inside your HTML:
+  You can open the SVG file in a text editor, copy the SVG code, and paste it into your HTML document -- this is sometimes called putting your SVG inline, or inlining SVG.
+  Just make sure your SVG code snippet begins and ends with the <svg></svg> tags
+  Pros:
+    Putting your SVG inline saves an HTTP request, and therefore reduces your loading time slightly
+    You can assign classes and ids to SVG elements and style them with CSS
+    Inlining SVG is the only approach that lets you use CSS interactions (like :focus) and CSS animations on your SVG image
+    You can make SVG markup into a hyperlink by wrapping it in an <a> anchor element
+  Cons:
+    This method is only suitable if you're using the SVG in only one place. Duplication makes for resource-intensive maintenance
+    Extra SVG code increases the size of your HTML file
+    The browser cannot cache inline SVG as it would cache regular image assets, so pages that include the image will not load faster after the first page containing the image is loaded.
+    You may include fallback in a <foreignObject> element, but browsers that support SVG still download any fallback images. You need to weigh whether the extra overhead is really worthwhile, just to support obsolescent browssers.
+
+Lastly, you can embed an SVG with an <iFrame> element, but it's not recommended.
+  Cons:
+    iFrames do have a fallback mechanism, but browsers only display the fallback if they lack support for iFrames altogether, not SVG
+    Moreover, unless the SVG and your current webpage have the same origin, you cannot use JavaScript on your main webpage to manipulate the SVG
+
+Lessons learned: 
+  If you just need a quick SVG without any manipulation with CSS or JavaScript, use the <img> element and simply point to the SVG with the src attribute
+  If you want more manipulation with JavaScript or CSS, use the SVG markup code which allows you to attach CSS classes and ids to it
 
