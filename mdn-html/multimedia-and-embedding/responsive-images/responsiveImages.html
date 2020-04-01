@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="The purpose of this webpage is to learn about responsive images in HTML.">
+  <title>Responsive Images</title>
+</head>
+<body>
+
+  <!-- Responsive Image Example with srcset and sizes attribute -->
+  <img srcset="elva-fairy-480w.jpg 480w,
+               elva-fairy-800w.jpg 800w"
+       sizes="(max-width: 600px) 480px, (max-width: 799px) 800px"
+       src="elva-fairy-800w.jpg"
+       alt="Elva dressed as a fairy">
+
+  <!-- srcet defines the set of images we will allow the browser to choose between, and what size each image is. 
+    1. An image filename (elva-fairy-480w.jpg)
+    2. A space
+    3. The image's intrinsic width in pixels (480w). This is the image's real size
+
+    -- sizes defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true -- these are the hints we talked about.
+    1. A media condition (max-width:600) -- "when the viewport width is 600px or less"
+    2. A space
+    3. The width of the slot the image will fill when the media condition is true (480px)
+    4. The last slot width has no media condition (this is the default that is chosen when none of the media conditions are true)
+    5. The browser ignores everything after the first matching condition, so be careful how you order your media conditions
+
+    -- src is still used as a fallback src file for those browsers that don't support srcset
+
+
+
+
+   -->
+
+
+</body>
+</html>
