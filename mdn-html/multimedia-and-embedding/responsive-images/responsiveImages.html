@@ -38,11 +38,14 @@
        src="elva-fairy-640w.jpg" 
        alt="Elva dressed as a fairy">
 
-  <!-- CSS is applied to the image so that it will have a width of 320px and so in this case, sizes attribute is not needed -- the browser simply works out what resolution the display is that it is being shown on, and serves the most appropriate image referenced in srcset.
-  
-  
-  
-  -->
+  <!-- CSS is applied to the image so that it will have a width of 320px and so in this case, sizes attribute is not needed -- the browser simply works out what resolution the display is that it is being shown on, and serves the most appropriate image referenced in srcset. -->
+
+  <!-- Art Direction using <picture> element -->
+    <picture>
+      <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+      <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+      <img src="elva-800w.jp" alt="Chris standing up holding his daughter Elva">
+    </picture>
 
 </body>
 </html>
