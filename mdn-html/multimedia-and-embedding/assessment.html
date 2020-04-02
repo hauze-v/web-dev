@@ -103,13 +103,13 @@
     <h1>Mozilla</h1>
     <!-- insert <img> element, link to the small
         version of the Firefox logo -->
-
+    <img src="firefox_logo-only_RGB_120.png" alt="small Mozilla Firefox Logo">
   </header>
 
   <main>
     <article>
       <!-- insert iframe from youtube -->
-
+      <iframe width="400" height="235" src="https://www.youtube.com/embed/ojcNcvb1olg" controls allowfullscreen></iframe>
       <h2>Rocking the free web</h2>
 
       <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
@@ -119,14 +119,21 @@
 
     <div class="further-info">
       <!-- insert images with srcsets and sizes -->
+
+      <!-- Firefox Browser link -->
       <a href="https://www.mozilla.org/en-US/firefox/new/">
-        <img>
+        <img src="" alt="">
       </a>
       <a href="https://www.mozilla.org/">
         <img>
       </a>
+      <!-- Firefox addons link -->
       <a href="https://addons.mozilla.org/">
-        <img>
+        <img
+          srcset="firefox-addons_120.jpeg 120w,
+                  firefox-addons.jpg 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="firefox-addons.jpg" alt="Firefox addons image">
       </a>
       <a href="https://developer.mozilla.org/en-US/">
         <img>
