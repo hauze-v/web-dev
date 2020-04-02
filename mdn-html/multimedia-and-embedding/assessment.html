@@ -122,11 +122,22 @@
 
       <!-- Firefox Browser link -->
       <a href="https://www.mozilla.org/en-US/firefox/new/">
-        <img src="" alt="">
+        <img
+          srcset="firefox_logo-only_RGB_120.png 120w,
+                  firefox_logo-only_RGB.png 400w"
+          sizes="(max-width: 500) 120px, 400px"
+          src="firefox_logo-only_RGB.png" alt="Basic Firefox logo">
       </a>
+
+      <!-- Mozilla Dinosaur link -->
       <a href="https://www.mozilla.org/">
-        <img>
+        <img
+          srcset="mozilla-dinosaur-head-120.png 120w,
+                  mozilla-dinosaur-head.png 400w"
+          sizes="(max-width: 500) 120px, 400px"
+          src="mozilla-dinosaur-head.png" alt="Basic mozilla Dinosaur head logo">
       </a>
+
       <!-- Firefox addons link -->
       <a href="https://addons.mozilla.org/">
         <img
@@ -135,14 +146,22 @@
           sizes="(max-width: 500px) 120px, 400px"
           src="firefox-addons.jpg" alt="Firefox addons image">
       </a>
+
+      <!-- Mozilla Developer link -->
       <a href="https://developer.mozilla.org/en-US/">
-        <img>
+        <img src="index.svg" alt="SVG for MDN logo">
       </a>
+
       <div class="clearfix"></div>
     </div>
 
     <div class="red-panda">
-      <!-- insert picture element -->
+      <!-- insert picture element (ART DIRECTION) -->
+      <picture>
+        <source media="(max-width: 599px)" srcset="red-panda-600.jpeg">
+        <source media="(min-width: 600px)" srcset="red-panda.jpg">
+        <img src="red-panda.jpg" alt="picture of a red panda">
+      </picture>
     </div>
 
   </main>
