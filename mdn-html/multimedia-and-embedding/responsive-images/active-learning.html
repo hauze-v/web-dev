@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="This webpage is to apply active learning around responsive images in HTML.">
+  <title>Active Learning - Responsive Images in HTML</title>
+</head>
+<body>
+  
+  <!-- Use Picture element to implement an art direction picture switcher -->
+  <picture>
+    <source media="(max-width: 799px)" srcset="landscapeSmall.jpg">
+    <source media="(max-width: 800px)" srcset="landscape.jpg">
+    <img src="landscape.jpg" alt="Landscap shot of a lake, trailer homes, and mountains.">
+  </picture>
+
+  <!-- Resolution switching: Different sizes -->
+  <img
+    srcset="landscape.jpg 3000w,
+            landscapeSmall.jpg 400w"
+    sizes="(max-width: 4000px) 3000px, (max-width: 400px) 400px"
+    src="landscape.jpg" alt="picture of a landscape">
+</body>
+</html>
