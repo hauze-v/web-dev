@@ -10,6 +10,7 @@ int main(void) {
     // Count letters
     int letters = 0;
     for (int i = 0; i < strlen(text); i++) {
+
         // Check if letter and add if so
         if (isalpha(text[i]))
         {
@@ -24,7 +25,7 @@ int main(void) {
             words++;
         }
     }
-    
+
     printf("Letters: %i\n", letters);
     printf("Word: %i\n", words);
 }
