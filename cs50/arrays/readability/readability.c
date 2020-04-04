@@ -2,6 +2,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <ctype.h>
+# include <math.h>
 
 int main(void) {
 
@@ -31,7 +32,12 @@ int main(void) {
         }
     }
 
-    printf("Letters: %i\n", letters);
-    printf("Word: %i\n", words);
-    printf("Sentences: %i\n", sentences);
+    // Calculate L & S
+    float L = (float) (100 * letters / words);
+    float S = (float) (100 * sentences / words);
+
+    // Calculate Grade level
+
+    printf("Grade: %i\n", gradeRound);
 }
+
