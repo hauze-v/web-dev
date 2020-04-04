@@ -36,8 +36,18 @@ int main(void) {
     float L = (float) (100 * letters / words);
     float S = (float) (100 * sentences / words);
 
-    // Calculate Grade level
 
-    printf("Grade: %i\n", gradeRound);
+    // Calculate Grade level
+    float index = (0.0588 * L) - (0.296 * S) - 15.8;
+    int grade = round(index);
+
+
+    if (grade < 1) {
+        printf("Before grade 1\n");
+    } else if (grade > 16) {
+        printf("Grade 16+\n");
+    } else {
+        printf("Grade: %i\n", grade);
+    }
 }
 
