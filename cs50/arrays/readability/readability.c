@@ -5,27 +5,33 @@
 
 int main(void) {
 
+    // Prompt user for text
     string text = get_string("Text: ");
 
-    // Count letters
     int letters = 0;
+    int words = 1;
+    int sentences= 0;
+
     for (int i = 0; i < strlen(text); i++) {
 
-        // Check if letter and add if so
+        // Count letters
         if (isalpha(text[i]))
         {
             letters++;
         }
-    }
 
-    // Count words
-    int words = 1;
-    for (int i=0; i < strlen(text); i++) {
+        // Count words
         if (text[i-1] == 32 && isalpha(text[i])){
             words++;
+        }
+
+        // Count sentences
+        if(text[i] == 46 || text[i] == 63 || text[i] == 33) {
+            sentences++;
         }
     }
 
     printf("Letters: %i\n", letters);
     printf("Word: %i\n", words);
+    printf("Sentences: %i\n", sentences);
 }
