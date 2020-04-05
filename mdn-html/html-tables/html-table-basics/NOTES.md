@@ -14,3 +14,14 @@ Use the <th> element to denote a strongly emphasized a cell at the start of a ro
 
 ## Allowing cells to span multiple rows and columns ##
 Use the `colspan` and `rowspan` attributes to span the cell across multiple columns or rows
+
+## Providing common styling to columns ##
+HTML has a method of defining styling infomration for an entire column of data all in one place - the <col> and <colgroup> elements.
+
+These exist because it can be a bit annoying and inefficient having to specify styling on columns -- you generally have to specifiy your styling information on every <td> or <th> in the column, or use a complex selector such as :nth-child();
+
+Instead, we can specify the information once, on a <col> element.
+
+<col> elements are specified inside a <colgroup> container just below the opening <table> tag
+
+** IT SEEMS THE COL ATTRIBUTE IS NOT SUPPORTED BY BROWSERS AND IS CONSIDERED INSECURE OR SOMETHING, THE RECOMENDATION IS TO USE A CSS CLASS ON ALL COLUMNS (yes it sucks) **
