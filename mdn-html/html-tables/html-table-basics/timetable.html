@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Adam Hauze">
+    <meta name="description" content="The purpose of this webpage is to apply my HTML table styling abilities">
+    <title>School timetable</title>
+    <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 2px solid rgb(200,200,200);
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    td, th {
+      border: 1px solid rgb(190,190,190);
+      padding: 10px 20px;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    caption {
+      padding: 10px;
+    }
+
+    .green-column {
+      background-color:#97DB9A;
+    }
+
+    .fourth-col {
+      width: 42px;
+    }
+
+    .fifth-col {
+      background-color: #97DB9A;
+    }
+
+    .sixth-col {
+      background-color: #DCC48E;
+      border: 4px solid #C1437A;
+    }
+
+    .weekend {
+      width: 42px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>School timetable</h1>
+
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Mon</th>
+        <th class="green-column">Tues</th>
+        <th class="fourth-col">Wed</th>
+        <th class="fifth-col">Thurs</th>
+        <th class="sixth-col">Fri</th>
+        <th class="weekend">Sat</th>
+        <th class="weekend">Sun</th>
+      </tr>
+      <tr>
+        <th>1st period</th>
+        <td>English</td>
+        <td class="green-column">&nbsp;</td>
+        <td class="fourth-col">&nbsp;</td>
+        <td class="fifth-col">German</td>
+        <td class="sixth-col">Dutch</td>
+        <td class="weekend">&nbsp;</td>
+        <td class="weekend">&nbsp;</td>
+      </tr>
+      <tr>
+        <th>2nd period</th>
+        <td>English</td>
+        <td class="green-column">English</td>
+        <td class="fourth-col">&nbsp;</td>
+        <td class="fifth-col">German</td>
+        <td class="sixth-col">Dutch</td>
+        <td class="weekend">&nbsp;</td>
+        <td class="weekend">&nbsp;</td>
+      </tr>
+      <tr>
+        <th>3rd period</th>
+        <td>&nbsp;</td>
+        <td class="green-column">German</td>
+        <td class="fourth-col">&nbsp;</td>
+        <td class="fifth-col">German</td>
+        <td class="sixth-col">Dutch</td>
+        <td class="weekend">&nbsp;</td>
+        <td class="weekend">&nbsp;</td>
+      </tr>
+      <tr>
+        <th>4th period</th>
+        <td>&nbsp;</td>
+        <td class="green-column">English</td>
+        <td class="fourth-col">&nbsp;</td>
+        <td class="fifth-col">English</td>
+        <td class="sixth-col">Dutch</td>
+        <td class="weekend">&nbsp;</td>
+        <td class="weekend">&nbsp;</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
