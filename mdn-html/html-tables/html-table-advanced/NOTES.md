@@ -16,3 +16,4 @@ To use them:
   The <tfoot> element needs to wrap the part of the table that is the footer -- this might be a final row with items in the previous rows summed, for example. You can include the table footer at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
 
   The <tbody> element needs to wrap the parts of the table that aren't in the header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it. 
+
