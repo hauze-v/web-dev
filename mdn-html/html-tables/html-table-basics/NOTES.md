@@ -24,4 +24,4 @@ Instead, we can specify the information once, on a <col> element.
 
 <col> elements are specified inside a <colgroup> container just below the opening <table> tag
 
-** IT SEEMS THE COL ATTRIBUTE IS NOT SUPPORTED BY BROWSERS AND IS CONSIDERED INSECURE OR SOMETHING, THE RECOMENDATION IS TO USE A CSS CLASS ON ALL COLUMNS (yes it sucks) **
+** IT SEEMS THAT ONLY CERTAIN PROPERTIES ARE SUPPORTED BY BROWSERS IN REGARDS TO <col> / <colgroup>, THE RECOMENDATION IS TO USE A CSS CLASS ON ALL COLUMNS (yes it sucks) **
