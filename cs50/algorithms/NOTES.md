@@ -11,4 +11,6 @@ Omega is similar notation for algorithm efficiency, but means: "In the BEST case
   Then swap that smallest item with i'th item.
 
 Recursion
-  A technique in programming that calls itself, or makes references to itself.   
+  A technique in programming that calls itself, or makes references to itself. 
+
+If an algorithm has the same Big O and Omega you can represent that with another Greek symbol - Theta
