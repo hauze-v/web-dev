@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="The purpose of this webpage is to practice building HTML tables for visually impaired users.">
+  <title>HTML tables for Visually Impaired</title>
+</head>
+<body>
+  
+  <!-- Example of scope attribute which can help identify what headers are headers for (row / column) -->
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Purchase</th>
+        <th scope="col">Location</th>
+        <th scope="col">Date</th>
+        <th scope="col">Evaluation</th>
+        <th scope="col">Cost (€)</th>
+      </tr>
+    </thead>
+  </table>
+  
+  <table>
+    <tr>
+      <th scope="row">Haircut</th>
+      <td>Hairdressor</td>
+      <td>12/09</td>
+      <td>Great Idea</td>
+      <td>30</td>
+    </tr>
+  </table>
+
+  <!-- Example of using id attribute and header attribute instead for when you have both col and row headers and want to be explicit -->
+  <table>
+    <thead>
+      <tr>
+        <th id="purchase">Purchase</th>
+        <th id="location">Location</th>
+        <th id="date">Date</th>
+        <th id="evaluation">Evaluation</th>
+        <th id="cost">Cost (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th id="haircut">Haircut</th>
+      <td headers="location haircut">Hairdresser</td>
+      <td headers="date haircut">12/09</td>
+      <td headers="evaluation haircut">Great idea</td>
+      <td headers="cost haircut">30</td>
+    </tr>
+  </table>
+
+  <!-- This method creates very precise associations between headers and data cells but it uses A LOT more markup and does not leave any room for errors. The scope attribute approach is usually enough for most ables -->
+    
+
+</body>
+</html>
