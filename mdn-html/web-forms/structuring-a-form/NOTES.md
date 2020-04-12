@@ -34,3 +34,14 @@ Strictly speaking, you can put multiple labels on a single widget, but this is n
 Note that `aria-label` attributes are always read by screenreaders while `titles` sometimes are.
 
 Try not to have multiple labels but if you must, nest them inside one single label.
+
+## Common HTML structures used with forms ##
+It's common practice to wrap a label and its widget with a <li> element within a <ul> or <ol> element.
+
+<p> and <div> elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
+
+In addition to the <fieldset> element, it's also common practie to use HTML titles (e.g. <h1>, <h2>) and sectioning (<section>) to structure complex forms.
+
+Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. 
+
+Each separate section of functionality should be contained in a separate <section> element, with <fieldset> elements to contain radio buttons.
