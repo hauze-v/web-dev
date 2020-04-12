@@ -45,5 +45,36 @@
       <label for="taste_2">I like blueberry</label>
     </p>
   </form>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- Example of using multiple labels -->
+  <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+
+  <!-- So this... -->
+  <div>
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username">
+    <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
+  </div>
+
+  <!-- would be better done like this: -->
+  <div>
+    <label for="username">
+      <span>Name:</span>
+      <input type="text" id="username" name="username">
+      <abbr title="required" aria-label="require">*</abbr>
+    </label>
+  </div>
+
+  <!-- But this is probably best: -->
+  <div>
+    <label for="username">Name: <abbr title="require" aria-label="required">*</abbr></label>
+    <input type="text" id="username" name="username">
+  </div>
+
+
 </body>
 </html>

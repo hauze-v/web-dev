@@ -28,3 +28,9 @@ Labels are clickable, too!
   Another advantage of properly setting up labels is that you can click or tap the label to activate the corresponding widget. This is useful for controls like text inputs, where you can click the label as well as the input to focus your cursor inside it. 
   It's especially useful for radio buttons and checkboxes - the hit area of such a control can be very small, so it's useful to make it as easy to activate as possible.
 
+Strictly speaking, you can put multiple labels on a single widget, but this is not a good idea as some assistive technologies can have trouble handling them.
+  In the case of multiple labels, you should nest a widget and its labels inside a single <label> element
+
+Note that `aria-label` attributes are always read by screenreaders while `titles` sometimes are.
+
+Try not to have multiple labels but if you must, nest them inside one single label.
