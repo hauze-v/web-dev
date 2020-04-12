@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="The purpose of this webpage is to learn about how to structure form data.">
+  <title>How to Structure Form Data </title>
+</head>
+<body>
+  
+  <!-- Example of <fieldset> and <legend> elements -->
+  <form action="../your-first-form/my-handling-form-page.html">
+    <!-- A fieldset element is a way to group form controls semantically or for easy styling -->
+    <fieldset>
+      <!-- A legend element is a way to label all the form controls inside a fieldset -->
+      <legend>Fruit juice size</legend>
+      <p>
+        <!-- Remember that the value attribute here describes the value (or data) sent to the web server when the form is submitted. It's a key value pair where name is the key attribute and value is the value attribute -->
+        <input type="radio" name="size" id="size_1" value="small"> 
+        <label for="size_1">Small</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_2" value="medium">
+        <label for="size_1">Medium</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_3" value="large">
+        <label for="size_1">Large</label>
+      </p>
+    </fieldset>
+  </form>
+
+  <!-- In the above example, a screen reader will speak "Fruit Juice size small" for the first widget and "Fruit juice size medium" for the second," etc. This use case is one of the most important, in fact, each time you have a set of radio buttons, you should nest them inside a <fieldset> element. -->
+
+</body>
+</html>
