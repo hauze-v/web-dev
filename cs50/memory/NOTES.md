@@ -17,3 +17,7 @@ ALso if you declare two strings, s and t, even if they're the same characters, t
 If you copy (re-assign) a string variable 's', you're really only copying the address of that variable. Remember it's all just a pointer to memory.
 
 In C you have to literally allocate more memory for yourself and you can run into memory leaked issues
+
+Heap moves down the stack with malloc function and stack functions work up the stack.
+
+Passing by value with only assign a COPY of the value. Instead, you should pass the address or reference to the variable or value you want to replace and swap.

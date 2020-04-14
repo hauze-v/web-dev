@@ -65,6 +65,41 @@
         <input type="password" id="pwd" name="password">
       </p>
     </section>
+
+    <!-- New section for payment information -->
+    <section>
+      <h2>Payment Information</h2>
+      <p>
+        <label for="card">
+          <span>Card Type:</span>
+        </label>
+        <select name="usercard" id="card">
+          <option value="visa">Visa</option>
+          <option value="mc">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </p>
+      <p>
+        <label for="number">
+          <span>Card Number:</span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="tel" id="number" name="cardnumber">
+      </p>
+      <p>
+        <label for="date">
+          <span>Expiration date:</span>
+          <strong><abbr title="required">*</abbr></strong>
+          <em>formatted as mm/dd/yyyy</em>
+        </label>
+        <input type="date" id="date" name="expiration">
+      </p>
+    </section>
+
+    <!-- New section for submit button -->
+    <p>
+      <button type="submit">Validate the payment</button>
+    </p>
   </form>
 
 </body>
