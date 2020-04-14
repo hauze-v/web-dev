@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="The purpose of this webpage is to create a deeper understanding of basic, native html form controls.">
+  <title>HTML Native Form Controls</title>
+</head>
+<body>
+  <!-- Example form controls -->
+
+  <!-- Text Field -->
+  <input type="text" id="userame" name="username" value="hatch">
+
+  <!-- Text field - password -->
+  <input type="password" id="password" name="password" value="tmppwd">
+
+  <!-- Hidden text field (timestamp perhaps) -->
+  <input type="hidden" name="timestamp" id="timestamp" value="13:58:00">
+
+  <!-- Checkboxes -->
+  <input type="checkbox" id="pizza" name="pizza" checked>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- Radio buttons & how to group them together so that only one can be clicked (ensure they all have the same name atribute)-->
+  <fieldset>
+    <legend>
+      Select which video game you'd want to become real life:
+    </legend>
+    <ul>
+      <li>
+        <input type="radio" id="ffxi" name="game" checked>
+        <label for="ffxi">Final Fantasy XI</label>
+      </li>
+      <li>
+        <input type="radio" id="pokemon" name="game">
+        <label for="pokemon">Pokemon</label>
+      </li>
+      <li>
+        <input type="radio" id="wow" name="game">
+        <label for="wow">World of Warcraft</label>
+      </li>
+    </ul>
+  </fieldset>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- Types of Buttons -->
+
+  <!-- Submit -->
+  <button type="submit">
+    This is a <strong>submit button</strong>
+  </button>
+
+  <input type="submit" value="This is a submit button">
+
+<!-- Reset -->
+<button type="reset">
+  This is a <strong>reset button</strong>
+</button>
+
+<input type="reset" value="This is a reset button">
+
+<!-- Anonymous -->
+<button type="button">
+  This is an <strong>anonymous button</strong>
+</button>
+
+<input type="button" value="This is an anoynmous button">
+
+<br>
+<br>
+<br>
+
+<!-- Image Buttons -->
+<input type="image" id="imgSubmit" src="../../website-structure/assets/dove.png" alt="Click me!" width="80" height="30">
+</body>
+</html>

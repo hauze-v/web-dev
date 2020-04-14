@@ -36,3 +36,42 @@ In the case of checkable items, their values are sent only if they are checked. 
 
 If they are checked but have no value, the `name` is sent with a value of `on`
 
+Remember, for maximum usability/accessibility, you are advised to surround each list of related items in a <fieldset> with a <legend> providing an overall description of the list.
+  Each individual pair of <label>/<input> elements should be contained in its own <li> or something similar.
+  The associated <label> is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio buttons or checkboxes generally being the content of the <legend>
+
+--- CHECK BOX ---
+A checkbox is created using the <input> element with a `type` attribute set to the value of `checkbox`
+
+Including the `checked` attribute makes the checkbox checked automatically when the page loads
+
+Due to the on-off nature of checkboxes, many developers and designers have expanded on the default checkbox styling to create buttons that look like toggle switches
+
+--- RADIO BUTTON ---
+A radio button is created using the <input> element with a `type` attribute set to the value of `radio`
+
+Several radio buttons can be tied together. If they share the same value for thier `name` attribute, they will be considered to be in the same group of buttons.
+  Only one button in a given group may be checked then at a time; this means that when one of them is checked all the others automatically get unchecked.
+  When the form is sent, only the value of the checked radio button is sent.
+  If none are checked upon submission, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form
+
+## Actual Buttons ##
+There are three input types that produce buttons:
+  `submit` - send the form data to the server, For <button> elements, omitting the `type` attribute also results in a submit button
+  `reset` - resets all form widgets to their default values
+  `button` - buttons that have no automatic effect but can be customized later using JavaScript
+
+In addition, the <button> element can take a `type` attribute to mimic these three input types.
+  The main difference between the two is that actual <button> elements are much more stylable
+  Typically you'll want to use buttons over inputs for that reason
+
+--- IMAGE BUTTONS ---
+The image button control is rendered exactly like an <img> element, except that when the user clicks it, it behaves like a submit button.
+
+An image button is created using an <input> element with its `type` attribute set to the value `image`
+  This element supports exactly the same set of attributes as the <img> element, plus all the attributes supported by other form buttons
+
+If the image button is used to submit the form, it doesn't submit its value -- instead, the X and Y coordinates of the click on the image are submitted.
+  This is very convenient if you're trying to build a hot map. We'll talk more about this is an article titled Sending form data
+
+## File Picker ##
