@@ -75,3 +75,18 @@ If the image button is used to submit the form, it doesn't submit its value -- i
   This is very convenient if you're trying to build a hot map. We'll talk more about this is an article titled Sending form data
 
 ## File Picker ##
+Forms are able to send files to a server. The file picker widget can be used to choose one or more files to send.
+
+To create a file picker widget, you use the <input> element with its `type` attribute set to `file`.
+  The types of files that are accepted can be constrained using the `accept` attribute.
+  In addition, if you want to let the user pick more than one file, you can do so by adding the `multiple ` attribute
+
+## Common attributes ##
+Many elements used to define form controls have some of their own specific attributes
+
+However, there is a set of attributes common to all form elements:
+  `autofocus` - this boolean attribute lets you specify that the element should automatically have input focus when the page loads. Only one form-associated element in a document can have this attribute specified
+  `disabled` - this attr indicates that the user cannot interact with the element. If this attr is not specified, the element inherits its setting from the containing element, for example, <fieldset>;
+  `form` - the <form> element that the widget is associated with, used if it is not nested within that form. The value of the attribute must be the `id` attribute of the <form> element. This lets you associate a form control with a form it is outside of
+  `name` - the name of the element; this is submitted with the form data
+  `value` - the element's initial value

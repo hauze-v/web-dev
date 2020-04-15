@@ -80,5 +80,12 @@
 
 <!-- Image Buttons -->
 <input type="image" id="imgSubmit" src="../../website-structure/assets/dove.png" alt="Click me!" width="80" height="30">
+
+<!-- File Picker Example -->
+<input type="file" name="file" id="file" accept="image/*" multiple>
+<!-- On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the accept attribute like so: -->
+<input type="file" accept="image/*;capture=camera">
+<input type="file" aceept="video/*;capture=camcorder">
+<input type="file" accept="audio/*;capture=microphone">
 </body>
 </html>
