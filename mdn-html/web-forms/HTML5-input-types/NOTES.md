@@ -20,3 +20,14 @@ Search fields are intended to be used to create search boxes on pages and apps. 
 
 Another feature worth noting is that the values of a search field can be automatically saved and re-used to offer auto-completion across multiple pages of the same website. 
   This tends to happen automatically in most modern browsers
+
+## Phone number field ##
+A special field for entering phone numbers can be created using `tel` for the input type
+  When accessed via a touch device with a dynamic keyboard, most devices will display a numeric keypad when `type="tel"` is encountered
+  This means this type is useful whenever a keypad might be useful, and not necessarily just for telephone numbers
+
+Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user. 
+
+As we mentioned earlier, the `pattern` attribute can be used to enforce constraints, which you'll learn more about in Client-side form validation article
+
+## URL field ##
