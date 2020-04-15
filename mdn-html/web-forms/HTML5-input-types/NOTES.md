@@ -31,3 +31,8 @@ Due to the wide variety of phone number formats around the world, this type of f
 As we mentioned earlier, the `pattern` attribute can be used to enforce constraints, which you'll learn more about in Client-side form validation article
 
 ## URL field ##
+A special type of field for entering URLs can be created using the value `url` for the `type` attribute
+  It adds special validation constraints to the field
+  The browser will report an error if no protocol (such as http:) is entered, or if the URL is otherwise malformed.
+
+On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, perido, and forward slash as default keys
