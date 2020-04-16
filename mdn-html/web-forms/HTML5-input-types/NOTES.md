@@ -92,3 +92,10 @@ Date and time widgets don't have the best browser support
 Another option is to consider using a JavaScript library to provide a date picker
 
 Most modern frameworks have good components available to provide this functionality, and there are standalone libraries available too.
+
+## Color Picker control ##
+A color control can be created using the <input> element with its `type` attribute set to the value of `color`
+
+When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. 
+
+The value returned is always a lowercase 6-value hexadecimal color
