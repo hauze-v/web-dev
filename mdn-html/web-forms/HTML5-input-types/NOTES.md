@@ -36,3 +36,14 @@ A special type of field for entering URLs can be created using the value `url` f
   The browser will report an error if no protocol (such as http:) is entered, or if the URL is otherwise malformed.
 
 On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, perido, and forward slash as default keys
+
+## Numeric Field ##
+Controls for entereing numbers can be created with an <input> element with `type` number. 
+  This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control
+  You can constrain the minimum and maximum values allowed by setting the `min` and `max` attributes
+  You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons
+
+By default, the number input type only validates if the number is an integer.
+  To allow float numbers, specify `step="any"`
+
+The number input type is great for when you'd like to limit the values so let's say for something like weight, height, age, etc. If you have something with a much greater range, or you don't know the range, then the `tel` input type would be better suited which forgoes the number spinner button.
