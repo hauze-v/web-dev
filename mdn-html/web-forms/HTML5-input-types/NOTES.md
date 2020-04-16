@@ -61,3 +61,34 @@ It's important to properly configure your slider
 
 One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is.
   That's why they're commonly used along with the <output> element which can be associated to the slider using the `for` attr and can display the current value
+
+## Date and Time Pickers ##
+A date and time control is created using the <input> element and an appropriate value for the `type` attribute, depending on whether you wish to collect dates, times, or both.
+
+Let's look at the different available types in brief. Note that the usage of these types is quite complex, especially when considering browser support.
+
+--- DATETIME-LOCAL ---
+This type creates a widget to display and pick a date with time with no specific time zone information
+
+--- MONTH ---
+Creates a widget to display and pick a month with a year
+
+--- TIME ---
+Creates a widget to display and pick a time value. While time may display in 12-hour format, the value returned is in 24-hour format.
+
+--- WEEK ---
+Creates a widget to display and pick a week number and its year.
+
+Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year - which may not include the first day of the year, or may include the last fewe days of the previous year.
+
+--- CONSTRAINING DATE/TIME VALUES ---
+All date and time controls can be constrained using the `min` and `max` attributes, with further constraining possible via the `step` attribute
+  Step used with date will skip that many days of the week, so for example, `step="7"` would mean ONLY Saturdays if you placed the `min` (starting day) on a Saturday.
+
+--- BROWSER SUPPORT FOR DATE/TIME INPUTS --- 
+Date and time widgets don't have the best browser support
+  Chrome, Edge, and Opera suppor them well, but there is no support in Internet Explorer, Safari and Firefox only supports `time` and `date` only
+
+Another option is to consider using a JavaScript library to provide a date picker
+
+Most modern frameworks have good components available to provide this functionality, and there are standalone libraries available too.
