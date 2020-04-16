@@ -47,3 +47,17 @@ By default, the number input type only validates if the number is an integer.
   To allow float numbers, specify `step="any"`
 
 The number input type is great for when you'd like to limit the values so let's say for something like weight, height, age, etc. If you have something with a much greater range, or you don't know the range, then the `tel` input type would be better suited which forgoes the number spinner button.
+
+## Slider Controls ##
+Another way to pick a number is to use a "slider". 
+  You see these quite often on sites like housebuying sites where you want to set a maximum property price to filter by.
+
+Usage wise, sliders are less accurate than text fields and are therefore used when precision isn't as important
+
+A slider is created using the <input> with its type attr set to the value of `range`.
+
+It's important to properly configure your slider
+  It's highly recommended that you set the `min`, `max`, and `step` attributes
+
+One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is.
+  That's why they're commonly used along with the <output> element which can be associated to the slider using the `for` attr and can display the current value
