@@ -1,0 +1,49 @@
+h1  {
+  color: red;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Example of descendant combinator selector */
+li em {
+  color: rebeccapurple;
+}
+
+/* Example of a sibling combinator selector
+    this will select the paragraph directly after the h1 */
+h1 + p {
+  font-size: 200%;
+}
+
+/* Example of styling by state */
+a:link {
+  color: darkgreen;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: darkred;
+}
+
+/* Example of combining selectors and combinators */
+
+/* selects any <span> that is inside a <p>, which is inside an article */
+body p span {
+  color: turquoise;
+}
+
+/* selects any <p> that comes directly after a <ul>, which comes directly after an <h1> */
+h1 + ul + p {
+  color: red;
+}
+
+body h1 + p .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
