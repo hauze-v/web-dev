@@ -61,9 +61,26 @@
     <option value="Zidane">Zidane</option>
     <option value="Steiner">Steiner</option>
     <option value="Vivi">Vivi</option>
-  </datalist>
+  </datalist> <br><br>
 
-  <!-- Datalist support and fallbacks eample -->
+  <!-- Datalist support and fallbacks example -->
+  <label for="summon">Who's your favorite summon in final fantasy? (with fallback)</label>
+  <input type="text" id="summon" name="summon" list="summonsList">
+  <datalist id="summonsList">
+    <label for="sugesstion">or pick a summon</label>
+    <select name="altSummon" id="suggestion"></select>
+    <option value="Ifirit">Ifirit</option>
+    <option value="Shiva">Shiva</option>
+    <option value="Carbuncle">Carbuncle</option>
+    <option value="Chocobo Chic">Chocobo Chic</option>
+    <option value="Cactar">Cactar</option>
+    <option value="Bahamut">Bahamut</option>
+    <option value="Mage Sisters">Mage Sisters</option>
+  </datalist> <br><br>
+
+  <!-- Progress bar example -->
+  <label for="progressBar"><strong>Progress Bar: </strong></label><br>
+  <progress max="100" value="75" id="progressBar">75/100</progress>
   
 </body>
 </html>

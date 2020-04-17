@@ -58,4 +58,18 @@ The data list is then bound to an <input> element (e.g. text or email) using the
 
 Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible mataches for what they've typed into the input
 
-Almost all browsers support datalist, but if you're still supporting older browsers such as IE version below 10, there is a trick to provide a fallback:
+Almost all browsers support datalist, but if you're still supporting older browsers such as IE version below 10, there is a trick to provide a fallback.
+
+Browsers that support the <datalist> element will ignore all the elements that are not <option> elements, with the datalist working as expected.
+  Old browsers that don't support the <datalist> element will display the label and select box.
+  If you use this fallback, ensure the data for both the <input> and <select> are collected server-side
+
+## Other form features ##
+There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
+
+--- METERS AND PROGRESS BARS ---
+Meters and progress bars are visual representations of numeric values
+
+Progress:
+  Bar that represents a value that changes over time up to a maximum value specified by the `max` attribute. Such a bar is created using a <progress> element.
+  The content inside the <progress> element is a fallback for browsers that don't support the element and for screen readers to vocalize it
