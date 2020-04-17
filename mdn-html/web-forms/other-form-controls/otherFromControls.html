@@ -10,7 +10,60 @@
 <body>
   
   <!-- Textarea Element example -->
-  <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+  <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea> <br><br>
 
+  <!-- Drop-down control examples -->
+  <select name="simple" id="simple">
+    <option value="banana">Banana</option>
+    <option value="bluleberry">Blueberry</option>
+    <option value="cherry" selected>Cherry</option>
+  </select>
+
+  <select name="groups" id="groups">
+    <optgroup label="games">
+      <option value="ffviir">FFVII Remake</option>
+      <option value="doom">Doom Eternal</option>
+      <option value="ffxiv" selected>FFXIV a Realm Reborn</option>
+    </optgroup>
+    <optgroup label="movies">
+      <option value="spiderman">Spider-man into the spiderverse</option>
+      <option value="inception">Inception</option>
+      <option value="wargames">Wargames</option>
+    </optgroup>
+  </select> <br><br>
+
+  <!-- Multiple choice select box -->
+  <select name="multi" id="multi" multiple size="12">
+    <optgroup label="characters (f)">
+      <option value="tifa" selected>Tifa</option>
+      <option value="aeirth">Aerith</option>
+      <option value="jessie">Jessie</option>
+    </optgroup>
+    <optgroup label="characters (m)">
+      <option value="berret">Berret</option>
+      <option value="cloud">Cloud</option>
+      <option value="wedge">Wedge</option>
+    </optgroup>
+  </select><br><br>
+
+  <!-- Autocomplete drop-down box example -->
+  <label for="myCharacters">Who's your favorite final fantasy character?</label>
+  <input type="text" name="character" id="character" list="charSuggestions">
+  <datalist id="charSuggestions">
+    <option value="Tifa">Tifa</option>
+    <option value="Cloud">Cloud</option>
+    <option value="Berret">Berret</option>
+    <option value="Red XIII">Red XIII</option>
+    <option value="Tidus">Tidus</option>
+    <option value="Wakka">Wakka</option>
+    <option value="Aron">Aron</option>
+    <option value="Jessie">Jessie</option>
+    <option value="Zidane">Zidane</option>
+    <option value="Steiner">Steiner</option>
+    <option value="Vivi">Vivi</option>
+  </datalist>
+
+  <!-- Datalist support and fallbacks eample -->
+  
 </body>
 </html>

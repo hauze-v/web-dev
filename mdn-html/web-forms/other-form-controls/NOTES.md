@@ -35,3 +35,27 @@ It's values are:
   `block` and `inline`: Experimental values that allow resizing in the `block` or `inline` direction only
 
 ## Drop-down Controls ##
+HTML has two forms of drop down content: the `select box` and the `autocomplete box`
+
+A simple select box is created with a <select> element with one or more <option> elements as its children, each of which specifies one of its possible values
+
+If required, the default value for the select box can be set using the `selected` attribute on the desired <option> element - this option is then preselected when the page loads.
+
+The <option> elements can be nested inside <optgroup> elements to create visually associated groups of values:
+  On the <optgroup> element, the value of the `label` is displayed before the values of the nested options.
+  If the <option> element has an explicit value attribute set on it, that value is sent when the form is submitted. If the `value` attribute is omitted, the content of the <option> element is used as the value so the `value` attribute is not necessarily needed unless you want to send a shorthand value
+
+By default, the height of the select box is enough to display a single value. The optional `size` attribute provides control over how many options are visable when the select does not have focus
+
+--- MULTIPLE CHOICE SELECT BOX ---
+By default, a select box only lets the user select a single value. By adding the `multiple` attribute to the <select> element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down cmd/ctrl and clicking multiple values)
+
+--- AUTOCOMPLETE BOX ---
+You can provide suggested, automatically-completed values for form widgets using the <datalist> element with child <option> elements to specify the values to display.
+  The <datalist> needs to be given an id
+
+The data list is then bound to an <input> element (e.g. text or email) using the `list` attribute, the value of which is the `id` of the data list to bind 
+
+Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible mataches for what they've typed into the input
+
+Almost all browsers support datalist, but if you're still supporting older browsers such as IE version below 10, there is a trick to provide a fallback:
