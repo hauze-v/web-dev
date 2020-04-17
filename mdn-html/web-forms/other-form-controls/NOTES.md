@@ -9,6 +9,7 @@ Main difference between <textarea> elements and <input> elemets with `type="text
 <textarea> also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the <input> element is an empty element with no closing tag -- any default value is put inside the `value` attribute.
 
 --- CONTROLING MULT-LINE RENDERING ---
+
 <textarea> accepts three attributes to control its rendering across several lines:
 
 `cols` - specifies the visible width (in columns) of the text control, measured in average character widths.
@@ -48,9 +49,11 @@ The <option> elements can be nested inside <optgroup> elements to create visuall
 By default, the height of the select box is enough to display a single value. The optional `size` attribute provides control over how many options are visable when the select does not have focus
 
 --- MULTIPLE CHOICE SELECT BOX ---
+
 By default, a select box only lets the user select a single value. By adding the `multiple` attribute to the <select> element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down cmd/ctrl and clicking multiple values)
 
 --- AUTOCOMPLETE BOX ---
+
 You can provide suggested, automatically-completed values for form widgets using the <datalist> element with child <option> elements to specify the values to display.
   The <datalist> needs to be given an id
 
@@ -68,6 +71,7 @@ Browsers that support the <datalist> element will ignore all the elements that a
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
 --- METERS AND PROGRESS BARS ---
+
 Meters and progress bars are visual representations of numeric values
 
 Progress:
