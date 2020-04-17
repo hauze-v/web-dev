@@ -92,6 +92,6 @@ Meters:
   
   Such a bar is created using the <meter> element. This is for implementing any kind of meter, for example a bar showing total space used on a disk, which turns red when it starts to get full.
 
-  Theh content inside the <meter> element is a fallback for browsers that dont' support the element and for assistive technologies to vocalize it
+  The content inside the <meter> element is a fallback for browsers that dont' support the element and for assistive technologies to vocalize it
 
-  Support for <progress> and <meter> is fairly good - there is not support for Internet Explorer, but other browsers support it well
+  Support for <progress> and <meter> is fairly good - there is not support for Internet Explorer, but other browsers support it well.
