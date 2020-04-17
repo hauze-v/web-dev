@@ -73,3 +73,25 @@ Meters and progress bars are visual representations of numeric values
 Progress:
   Bar that represents a value that changes over time up to a maximum value specified by the `max` attribute. Such a bar is created using a <progress> element.
   The content inside the <progress> element is a fallback for browsers that don't support the element and for screen readers to vocalize it
+
+Meters:
+  Bar that represents a fixed value in a range delimited by a `min` and `max` value. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
+  The `low` and `high` values divide the range in three parts:
+    The lower part between `min` and `low`, inclusive
+    The medium part of the range between `low` and `high`, exclusive
+    The higher part of the range between `high` and `max`, inclusive
+  The `optimum` value defines the optimum value for the <meter> element. In conjunction with the `low` and `high` value, it defines which part of the range is preferred:
+    If the `optimum` value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part
+    If the `optimum` value is in the medium part of the range, the lower range is average part, medium range is preferred part, and higher range is also average
+    If the `optimum` value is in the higher part of the range, lower part is worst part, medium is average part, and higher is preferrred part.
+  
+  All browsers that implement the <meter> element use those values to change the color of the meter bar: 
+    If the current value is in the preferred part, the bar is green
+    If the current value is in the average part, the bar is yellow
+    If the current value is in the worst part, the bar is red
+  
+  Such a bar is created using the <meter> element. This is for implementing any kind of meter, for example a bar showing total space used on a disk, which turns red when it starts to get full.
+
+  Theh content inside the <meter> element is a fallback for browsers that dont' support the element and for assistive technologies to vocalize it
+
+  Support for <progress> and <meter> is fairly good - there is not support for Internet Explorer, but other browsers support it well
