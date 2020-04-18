@@ -12,3 +12,18 @@ When a browser displays a document, it must combine the document's content with 
 6. The visual display of the page is shown on the screen (this stage is called painting).
 
 ## About the DOM ##
+A DOM has a tree-like structure. Each element, attribute, and piece of text in the markup language becomes a DOM node in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings. 
+
+Understanding the DOM helps you design, debug, and maintain your CSS because the DOM is where you CSS and document's content meet up.
+
+The DOM is where your HTML and CSS meet up.
+
+When you start working with browser DevTools  you will be navigating the DOM as you select items in order to see which rules apply.
+
+DevTools = the DOM battlefield
+
+## Applying CSS to the DOM ##
+The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS in this case, has a `span` selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three <span>s, then apint the final visual representation to the screen.
+
+So basically the flow is: 
+Load the HTML --> Parse the HTML and create DOM --> Load embeds & CSS --> Parse the CSS and apply the the DOM (render the tree) --> Paint the image
