@@ -27,3 +27,10 @@ The browser will parse the HTML and create a DOM from it, then parse the CSS. Si
 
 So basically the flow is: 
 Load the HTML --> Parse the HTML and create DOM --> Load embeds & CSS --> Parse the CSS and apply the the DOM (render the tree) --> Paint the image
+
+## What happens if a browser encounters CSS it doesn't understand? ##
+The answer is that it does nothing, and just moves on to the next bit of CSS!
+
+If a browser is parsing your rules, and encounters a property or value that it doesn't understand, it ignores it and moves on to the next declaration. It will do this if you have made an error and misspelled a property or value, or it the property or value is just too new and the browser doesn't support it yet. 
+
+Coupled with the way that the cascade effect works, and the fact that browsers will use the last CSS they come across in a stylesheet when you have two rules with the same specificity you can also offer alternatives for browsers that don't support new CSS.
