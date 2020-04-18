@@ -36,9 +36,9 @@ AT its most basic level, CSS consists of two building blocks:
   `properties` - human-readable identifieers that indicate which stylistic features (e.g. font-size, width, background-color) you want to change.
   `values` - each specified property is given a value, which indicates how you want to change those stylistic features
 
-  A propery paired with a value is called a `CSS declaration.` These declarations are put within `CSS declaration blocks` (between cury braces)
+  A propery paired with a value is called a **CSS declaration**. These declarations are put within **CSS declaration blocks** (between cury braces)
 
-  Finally, `CSS declaration blocks` are paired with `selectors` to produce `CSS Rulesets` or `CSS Rules`. 
+  Finally, **CSS declaration blocks** are paired with **selectors** to produce **CSS Rulesets** or **CSS Rules**. 
 
   It's important to remember that both properties and values are case-sensitive in CSS and they're both separated by a colon (:).
 
@@ -64,6 +64,9 @@ For example, to import an additional stylesheet into your main CSS stylesheet yo
 
 `@import 'styles2.css'`
 
-One of the most common rules you'll come across is @media, which allows you to use `media queries` to apply CSS only when certain conditions are true (e.g. when the screen resolution is above a certain amount, or the screen is wider than a certain width).
+One of the most common rules you'll come across is @media, which allows you to use **media queries** to apply CSS only when certain conditions are true (e.g. when the screen resolution is above a certain amount, or the screen is wider than a certain width).
 
-I
+## Shorthands ##
+Some properties like `font`, `background`, `padding`, `border`, and `margin` are called **shorthand properties** - this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.
+
+**Warning**: While shorthands often allow you to miss outu values, they will then reset any values that you do not include to their initial values. This ensure that a sensible set of values are used. However, this might be confusing if you were expecting the shorthand to only change the values you passed in.

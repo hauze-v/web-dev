@@ -8,3 +8,12 @@ body {
     background-color: blue;
   }
 }
+
+/* Shorthand examples */
+/* In 4-value shorthands like padding and margin, the values are applied
+   in the order top, right, bottom, left (clockwise from the top). There are also other 
+   shorthand types, for example 2-value shorthands, which set padding/margin
+   for top/bottom, then left/right */
+p {
+  padding: 10px 15px 15px 5px;
+}
