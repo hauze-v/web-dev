@@ -29,4 +29,44 @@ Some properties do not inherit - for example if you set a `width` of 50% on an e
 
 **Note** On MDN CSS property reference pages, you can usually see a list of data points about that property, including whether it is inheritied or not.
 
-## Understanding how the concepts work together ##
+## Understanding inheritance ##
+Let's start with inheritance, in the example in index.html, we have a <ul>, with two levels of unordered lists nested inside it. We have given the outer <ul> a broder, padding, and font color.
+
+The color haas applied to the direct children, but also the indirect children - the immediate child <li>s, and those inside the first nested list.
+
+We then add a class of `special` to the second nested list and applied a different color to it. This then inherits down through its children.
+
+THings like widths, margins, padding, and borders do not inherit. If a border were to be inherited by the children of our list, every single list and list item would gain a border - probably not an effect we would ever want!
+
+Which CSS properties are inherited by default and which aren't is largely down to common sense.
+
+--- CONTROLLING INHERITANCE ---
+CSS provides four special universal property values for controlling inheritance. Every CSS property accepts these values.
+
+`inherit`
+  Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
+
+`initial`
+  Sets the property value applied to a selected element to be the same as the value set for that property on that element in the browser's default style sheet.
+  If no value is set by the browser's default style sheet and the property is naturally inherited, then the property value is set to `inherit` instead.
+  Essentially says "set this to the default browser styling, if there is any, or inherit.
+
+`unset`
+  Resets the property to its natural value, which means that if the property is naturally inheritied it acts like `inherit`, otherwise it acts like `initial`.
+  In otherwords, it *resets a property to its inherited value if it inherits from its parent, and to its initial value if not.*
+
+`revert`
+  Newer value, which has limited browser support currently
+
+We can look at list of links and explore how the universal values work.
+
+For example:
+  1. The second list item has the class `my-class-1` applied. This sets the color of the <a> element nested inside to inherit. If you remove the rule how does it change the color of the link?
+  2. Do you understand why the third and fourth links are the color that they are? Check for description of the values above if not.
+  3. Which of the links will change color if you define a new color for the <a> element - for example a {color: red;}?
+
+--- RESETTING ALL PROPERTY VALUES ---
+The CSS shorthand property `all` can be used to apply one of these inheritance values to (almost) all properties at once. It's value can be any one of the inheritance values (`inherit`, `initial`, `unset`, or `revert`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes. 
+
+
+

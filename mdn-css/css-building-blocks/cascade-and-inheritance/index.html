@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <meta name="description" content="The purpose of this webpage is to learn about cascading, specificity, and inheritance CSS rules.">
+  <title>Cascade and inheritance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Understanding Inheritance -->
+  <ul class="main">
+    <li>Item one</li>
+    <li>Item two
+      <ul>
+        <li>2.1</li>
+        <li>2.2</li>
+      </ul>
+    </li>
+    <li>Item Three
+      <ul class="special">
+        <li>3.1
+          <ul>
+            <li>3.1.1</li>
+            <li>3.1.2</li>
+          </ul>
+        </li>
+        <li>3.2</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Example #2 -->
+  <ul>
+    <li>Default <a href="#">link</a> color</li>
+    <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+    <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+    <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+  </ul>
+
+<!-- Resetting all property values -->
+<blockquote>
+  <p>This blockquote is styled</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>This blockquote is not styled</p>
+</blockquote>
+
+</body>
+</html>
