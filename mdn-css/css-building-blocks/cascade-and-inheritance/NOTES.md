@@ -66,7 +66,41 @@ For example:
   3. Which of the links will change color if you define a new color for the <a> element - for example a {color: red;}?
 
 --- RESETTING ALL PROPERTY VALUES ---
-The CSS shorthand property `all` can be used to apply one of these inheritance values to (almost) all properties at once. It's value can be any one of the inheritance values (`inherit`, `initial`, `unset`, or `revert`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes. 
+The CSS shorthand property `all` can be used to apply one of these inheritance values to (almost) all properties at once. It's value can be any one of the inheritance values (`inherit`, `initial`, `unset`, or `revert`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+
+## Understanding the cascade ##
+We now understand why a paragraph nested deep in the structure of your HTML is the same color as the CSS applied to the body, and from the introductory lessons we have an understanding of how to change the CSS applied to something at any point in the document - whether by assigning CSS to an element or creating a class.
+
+We'll now take a proper look at how the cascade defines which CSS rules apply when more than one thing could style an element.
+
+There are three factors to consider, listed here in decreasing order of importance. Earlier ones overrule later ones:
+  1. **Importance**
+  2. **Specificity**
+  3. **Source Order**
+
+We will look at these from the bottom up, to see how browsers figure out exactly what CSS should be applied.
+
+--- SOURCE ODER ---
+We have already seen how source order matters to the cascade. If you have more than one rule, which has exactly the same weight (specificity), then the one that comes last in the CSS will win.
+
+--- SPECIFICITY ---
+Once you understand the fact that source order matters, at some point you will run into a situation where you know that a rule comes later in the stylesheet, but an earlier, conflicting rule is applied. This is because that earlier rule has a **higher specificity** - it's more specific, and therefore is being chosen by the browser as the one that should style the element.
+
+A class selector has more weight than an element selector, so the properties defined on the class will override those applied to the element.
+
+This behavior helps to avoid repetition in your CSS. A common practice is to define generic styles for the basic elements, and then create classes for those which are different.
+
+IDs have an *even higher* specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class - ID selectors are *very specific* in what they target).
+
+--- !IMPORTANT ---
+There is a special piece of CSS that you can use to overrule all of the above calculations, however you should be very careful with using it - `!important`
+  This is used to make a particular property and value the most specific thing, thus overriding the normal rules of the cascade.
+  Strongly recommended to never use this unless you absolutely have to
+  One place to use it would be a CMS (wordpress) where you don't have access to the CSS modules
+
+
+
+
 
 
 
