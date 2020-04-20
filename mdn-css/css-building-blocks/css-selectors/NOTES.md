@@ -13,3 +13,26 @@ For example, if we have the same CSS for an h1 and also a class of .special, I c
 However, I could also combine these into a selector list, by adding a comma between them. White space is valid before and after a comma so you might find the selectors more readable if each is on a new line.
 
 When you group selectors in this way, if any selector is invalid the whole rule will be ignored.
+
+## Types of Selectors ##
+There are a few different groupings of selectors, and knowing which type of selector you might need will help you to find the right tool for the job. In this article's subarticles we will look at the different groups of selectors in more detail.
+
+--- TYPE, CLASS, AND ID SELECTORS ---
+This group includes selectors that target an HTML element such as an <h1>
+
+It also includes selectors which target a class,
+
+or, an ID.
+
+--- ATTRIBUTE SELECTORS ---
+This group of selectors gives you different ways to select elements based on the presence of a certain attribute on an element.
+
+Or even make a selection based on the presence of an attribute with a particular value.
+
+--- PSEUDO-CLASSES AND PSEUDO-ELEMENTS ---
+This group of selectors includes pseduo-classes, which style certain states of an element. The :hover pseudo-class for example selects an element only when it is being hovered by the mouse pointer.
+
+It also includes pseudo-elements, which select a certain part of an element rather than the element itself. For example, ::first-line always selects the first line of text insdie an element (a <p> for example), acting as if a <span> was wrapped around the first formatted line and then selected
+
+--- COMBINATORS ---
+The final group of selectors combine other selectors in order to target elements within our documents. The following for example selects paragraphs that are direct children of <article> elements using the child combinator (>)

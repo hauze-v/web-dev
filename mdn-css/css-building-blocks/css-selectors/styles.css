@@ -17,3 +17,69 @@ strong,
 em {
   color: rebeccapurple;
 }
+
+/* Type, Class, and ID selectors */
+p {
+  color: skyblue;
+}
+
+.box {
+  color: slategray;
+}
+
+#unique {
+  color: blue;
+}
+
+/* Attribute selectors */
+a[title] {
+  color: ghostwhite;
+}
+
+a[href="https://example.com"] {
+  color: white;
+}
+
+/* Pseudo-classes style certain states of an element */
+a:hover {
+  color: red;
+}
+
+input:checked {
+  color :black;
+}
+
+button:disabled {
+  color: green;
+}
+
+/* Pseudo-elements select part of the element and not the entire thing */
+p::first-line {
+  background-color: yellow;
+}
+
+input::placeholder {
+  color: grey;
+}
+
+/* Combinator examples*/
+/* Child combinator */
+article > p {
+  color: red;
+}
+
+/* Descendant combinator */
+ul li {
+  color: red;
+}
+
+/* Adjacent sibling combinator */
+label + input {
+  color: green;
+}
+
+/* General sibling combinator */
+label ~ p {
+  color: blue;
+}
+
