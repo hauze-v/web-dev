@@ -1,0 +1,8 @@
+/* Universal selector can be used for global styles or to make things more readable */
+* {
+  background-color: blueviolet;
+}
+
+article *:first-child {
+  color: red;
+}
