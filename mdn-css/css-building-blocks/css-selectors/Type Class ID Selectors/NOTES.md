@@ -22,3 +22,17 @@ To avoid this confusion we can add the universal selector to the `:first-child` 
 article *:first-child {
 
 }
+
+## Class Selectors ##
+
+--- TARGETING CLASSES ON PARTICULAR ELEMENTS ---
+You can create a selector that will target specific elements with the class applied. In this next example, we highlight a <span> with a class of `highlight` differently to an <h1> heading with a class of `highlight`. We do this by using the type selector for the element we want to target, with the class appended using a dot, with no white space inbetween.
+
+This approach reduces the scope of a rule as the rule will only apply to that particular element & class combination; so you would need to add another selector if you decided the rule should apply to other elements too.
+
+--- TARGET AN ELEMENT IF IT HAS MORE THAN ONE CLASS APPLIED ---
+You can apply multiple classes to an element and target them individually, or only select the element when all of the classes in the selector are present. This can be helpful when building up components that can be combined in different ways on your site.
+
+In our example, we have a <div> that contains a note. The grey border is applied when the box has a class of `notebox`. If it also has a class of `warning` or `danger`, we change the `border-color`.
+
+We can tell the browser that we only want to match the element if it has all of these classes by chaining them together with no white space between them.
