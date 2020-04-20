@@ -1,0 +1,19 @@
+/* Selector lists can be used to group multiple together (use a comma) */
+h1, .special {
+  color: blue;
+}
+
+/* ^ Can also be written as and might be more readable: */
+h1,
+.special {
+  color: green;
+}
+
+span {
+  background-color: yellow;
+}
+
+strong,
+em {
+  color: rebeccapurple;
+}
