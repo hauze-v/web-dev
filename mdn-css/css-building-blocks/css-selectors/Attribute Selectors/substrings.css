@@ -1,0 +1,15 @@
+/* Substring Matching CSS Selectors */
+/* STARTS WITH */
+li[class^="a"] {
+  font-size: 200%;
+}
+
+/* ENDS WITH */
+li[class$="a"] {
+  background-color: yellow;
+}
+
+/* CONTAINS ANYWHERE  WITHIN STRING */
+li[class*="a"] {
+  color: red;
+}
