@@ -1,0 +1,16 @@
+/* Different types of attribute selectors */
+
+/* Basic attribute selector */
+li[class] {
+  font-size: 200%;
+}
+
+/* Attribute with exact value, only selector */
+li[class="a"] {
+  background-color: yellow;
+}
+
+/* Attribute with value that might also contain other values */
+li[class~="a"] {
+  color: red;
+}

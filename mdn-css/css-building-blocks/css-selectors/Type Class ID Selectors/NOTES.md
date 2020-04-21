@@ -36,3 +36,9 @@ You can apply multiple classes to an element and target them individually, or on
 In our example, we have a <div> that contains a note. The grey border is applied when the box has a class of `notebox`. If it also has a class of `warning` or `danger`, we change the `border-color`.
 
 We can tell the browser that we only want to match the element if it has all of these classes by chaining them together with no white space between them.
+
+## ID Selectors ## 
+ID has high specificity and will overrule most other selectors. This can make them difficult to deal with. In most caes it's preferable to add a class to the element rather than use an ID, however if using the ID is the only way to target the element - perhaps because you don't have access to the markup and so cannot edit it - this will work.
+
+Uses #YOURIDHERE syntax.
+
