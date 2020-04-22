@@ -1,0 +1,8 @@
+/* Case insensitivity examples (using `i` value) */
+li[class^="a"] {
+  background-color: yellow;
+}
+
+li[class^="a" i] {
+  color: red;
+}

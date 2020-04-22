@@ -36,3 +36,8 @@ Selector: `attr$=value`
 Selector: `[attr*=value]`
   Example: `li[class*="box"]`
   Description: Matches elements with an *attr* whose value contains *value* anywhere within the string.
+
+## Case-sensitivity ##
+If you want to match attribute values case-insensitively you can use the value `i` before the closing bracket. This flag tells the browserr to match ASCII characters case-insensitively. 
+
+Without the flag the values will be matched according to the case-sensitivity of the document language - in HTML's case it will be case sensitive.
