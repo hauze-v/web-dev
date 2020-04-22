@@ -1,0 +1,5 @@
+/* Pseudo elements example */
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
