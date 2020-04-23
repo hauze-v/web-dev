@@ -1,0 +1,4 @@
+/* Descendant selector (space in between) */
+.box p {
+  color: red;
+}
