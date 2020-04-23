@@ -2,3 +2,8 @@
 .box p {
   color: red;
 }
+
+/* Child selector (greather than sign) only selects direct child element. */
+ul > li {
+  border-top: 5px solid red;
+}
