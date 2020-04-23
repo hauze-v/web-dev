@@ -21,3 +21,10 @@ The adjacent sibling selector (`+`) is used to select something if it is right n
 A common use case is to do something with a paragraph that follows a heading, as in our html example. Here we are looking for a paragraph which is directly adjacent to an <h1>, and styling it.
 
 If you insert some other element such as an <h2> in between the <h1> and the <p>, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
+
+## General sibling ##
+If you want to select siblings of an element even if they are not "directly" adjacent, then you can use the general sibling combinator (`~`). To select all <img> elements that come *anywhere* after <p> elements, we'd do this:
+
+`p ~ img {width: 120%;}`
+
+In our html example, we are selecting all <p> elements that come after the <h1>, and even though there is a <div> in the document as well, the <p> that comes after is stil selected.
