@@ -1,0 +1,25 @@
+article p:first-child::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.box::before {
+  content: "This should show before the other content."
+}
+
+.box::after {
+  content: " Now this part should show after the other content."
+}
+
+.box::after {
+  content: "➥"
+}
+
+.box-two::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  border: 1px solid black;
+}

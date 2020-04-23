@@ -40,3 +40,20 @@ The `::first-line` psuedo-element selector will do this for you reliably - if th
 It acts as if a <span> was magically wrapped around that first formatted line, and updated each time the ling length changed.
 
 ## Combining pseudo-classes and pseudo-elements ##
+If you wanted to make the first line of the first paragraph bold you could chain the `:first-child` and `::first-line` selectors together. In the html example, we are saying that we want to select the first line, of the first <p> element, which is inside an <article> element.
+
+## Generating content with ::before and ::after ##
+There are a couple of special pseudo-elements, which are used along with the `content` property to insert content into your document using CSS.
+
+You could use these to insert a string of text, such as in the html example. Try changing the text value of the `content` property and see it change in the output. You could also change the `::before` pseudo-element to `::after` and see the text inserted at the end of the element instead of the beginning.
+
+Inserting strings of text from CSS isn't really something we do very often on the web, however as that text is inaccessible to some screen readers and might be hard for someone to find and edit in the future.
+
+A more valid use of these pseudo-elements is to insert an icon, for example a little arrow added in our html example, which is a visual indicator that we wouldn't want read out by a screenreader anyway.
+
+These pseudo-elements are also frequently used to insert an empty string, which can then be styled just like any element on the page.
+
+In our HTML example, we have added an empty string using the `::before` pseudo-element. We have set this to `display: block` in order that we style it with a width and height. We then use CSS to style it just like any element. You can play around with the CSS and change how it looks and behaves.
+
+The use of the `::before` and `::after` pseudo-elements along with the `content` property is referred to as "Generated Content" in CSS, and you will often see this technique being used for various tasks. A great example is the cite CSS Arrow Please, which helps you to generate an arrow with CSS. Look at the CSS as you create your arrow and you will see the `::before` and `::after` pseudo-elements in use. Whenever you see these selectors, look at the `content` property to see what is being added to the HTML document via CSS.
+
