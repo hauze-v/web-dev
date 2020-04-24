@@ -1,0 +1,29 @@
+/* Part three:
+    1. Style links, making the link-state orange, visited links green, and remove the underline on hover
+    2. Make the first element inside the container font-size: 150% and the first line of that element red
+    3. Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white */
+
+    a:link {
+      color: orange;
+    }
+    
+    a:visited {
+      color: green;
+    }
+    
+    a:hover {
+      text-decoration: none;
+    }
+    
+    div p:first-child {
+      font-size: 150%;
+    } 
+    
+    div p:first-child::first-line {
+      color: red;
+    }
+
+    tr:nth-child(even) {
+      background-color: #333;
+      color: white;
+    }
