@@ -22,3 +22,14 @@ The <a> element, used for links, <span>, <em>, and <strong> are all examples of 
 The type of box applied to an element is defined by `display` property values such as `block` and `inline` and relates to the **outer** value of display.
 
 ## Aside: Inner and outer display types ##
+At this point, we'd better also explain **inner** and **outer** display types. As mentioned above, boxes in CSS have an *outer* display type, which details whether the box is block or inline.
+
+Boxes also have an *inner* display type, however, which dictates how elements inside that box are laid out. By default, the elements inside a box are laid out in **normal flow**, which means that they behave just like any other block and inline elements (as explained above).
+
+We can, however, change the inner display type by using `display` values like `flex`. If we set `display: flex;` on an element, the outer display type is `block`, but the inner display type is changed to `flex`. Any direct children of this box will become flex items and will be laid out according to the rules set out in the **Flexbox** spec, which you'll learn about later on.
+
+When you move on to learn about CSS Layout in more detail, you'll encounter `flex`, and various other inner values that your boxes can have, for example, `grid`.
+
+Block and inline layout, however, is the default way that things on the web behave - as we said above, it is sometimes referred to as *normal flow*, because without any other instruction, our boxes lay out as block or inline boxes.
+
+## Examples of different display types ##
