@@ -47,8 +47,30 @@ Finally, we have two paragraphs both set to `display: inline`. The inline flex c
 
 **In the example, you can change display: inline to display: block or display: inline-flex to display: flex to toggle between these display modes.**
 
-We will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the `display` property can change whether the outer display type of a box is `block` or `inline`, which changes the way it displays alongside other elements in the layout. 
+We will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the `display` property can change whether the outer display type of a box is `block` or `inline`, which changes the way it displays alongside other elements in the layout.
 
 In the rest of this lesson, we'll concentrate on the outer display type.
 
 ## What is the CSS box model? ##
+The full CSS box model applies to block boxes, inline boxes only use some of the behavior defined in the box model. The model defines how the different parts of a box - margin, border, padding, and content - work together to create a box that you can see on the page. To add some additional complexity, there is a standard and an alternate box model.
+
+--- PARTS OF A BOX ---
+Making up a block box in CSS we have the:
+  **Content box**: The area where your content is displayed, which can be sized using properties like `width` and `height`
+  **Padding box**: The padding sits around the content as white space; its size can be controlled using `padding` and related properties
+  **Border box**: The border box wraps the content and any padding. Its size and style can be controlled uisng `border` and related properties
+  **Margin box**: The margin is the outermost layer, wrapping the content, padding and border as whitespace betwen this box and other elements. Its size can be controlled using `margin` and related properties.
+
+--- THE STANDARD CSS BOX MODEL ---
+In the standard box model, if you give a box a width and a height attribute, this defines the width and height of the *content box*. Any padding and border is then added to that width and height to get the total size taken up by the box.
+
+**Note**: The margin is not counted towards the actual size of the box - sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border - it does not extend into the margin.
+
+--- THE ALTERNATIVE CSS BOX MODEL ---
+You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border.
+
+By default, most browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting `box-sizing: border-box` on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.
+
+If you want all your elements to use the alternative box model, and this is common choice among developers, set the `box-sizing` property on the <html> element, then set all other elements to inherit that value, as seen in the css example.
+
+**Note**: Interesting bit of history - Internet Explorer used to default to the alternative box model, with no mechanism available to switch.

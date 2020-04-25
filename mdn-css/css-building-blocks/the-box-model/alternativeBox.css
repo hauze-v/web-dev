@@ -1,0 +1,14 @@
+/* How to set alternative box on specific element */
+.box {
+  box-sizing: border-box;
+}
+
+/* How to set alternative box for ALL elements */
+html {
+  box-sizing: border-box;
+}
+
+/* Then mark all to inherit from ^ html styles */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
