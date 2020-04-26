@@ -74,3 +74,16 @@ By default, most browsers use the standard box model. If you want to turn on the
 If you want all your elements to use the alternative box model, and this is common choice among developers, set the `box-sizing` property on the <html> element, then set all other elements to inherit that value, as seen in the css example.
 
 **Note**: Interesting bit of history - Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
+
+## Playing with box models ##
+In our example, you can see two boxes. Both have a class of .box, which gives them the same width, height, margin, border, and padding. The only difference is that the second box has been set to use the alternative box model.
+
+**Can you change the size of the second box (by adding CSS to the .alternate class) to make it match the first box in width and height?**
+
+To do so, you'll need to increase the height and width of the second block, to add the size of the padding and border.
+
+--- USING BROWSER DEVTOOLS TO VIEW THE BOX MODEL ---
+If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
+
+## Margins, Padding, and Borders ##
+
