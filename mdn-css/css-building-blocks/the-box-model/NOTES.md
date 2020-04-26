@@ -122,3 +122,18 @@ We can control the padding on each side of an element individually using the pad
 Everything above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a <span> element.
 
 In our HTML example, we have a <span> inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The margin, padding, and border are respected but they do not change the relationship of other content to our inline box so the padding and border overlaps other words in the paragraph.
+
+## Using display: inline-block ##
+There is a special value of `display`, which provides a middle ground between `inline` and `block`. This is useful for situations where you do not want an item to break onto a new line, but do want it to respect `width` and `height` and avoid the overlapping seen in our examples.
+
+An element with `display: inline-block` does a subset of the block things we already know about:
+  The `width` and `height` properties are respected
+  `padding`, `margin`, and `border` will cause other elements to be pushed away from the box
+
+It does not, however, break onto a new line, and will only become larger than its content if you explicitly add `width` and `height` properties
+
+A common use case for special value for `display` property is when you want to give a link to a larger hit area by adding padding. <a> is an inline element like <span>; you can use `display: inline-block` to allow padding to be set on it, making it easier for a user to click a link.
+
+You see this fairly frequently in navigation bars. The navigation below is displayed in a row using flexbox and we have added padding to the <a> element as we want to be able to change the `background-color` when the <a> is hovered. The padding appears to overlap the border on the <ul> element. This is because <a> is an inline element.
+
+If you add `display: inline-block` to the rule with the .links-list a selector, you will see how it fixes this issue by causing the padding to be respected by other elements.
