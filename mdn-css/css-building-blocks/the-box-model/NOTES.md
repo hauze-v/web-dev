@@ -117,3 +117,8 @@ For styling borders, there are a large number of properties - there are four bor
 THe padding sits between the border and the content area. Unlike margins you cannot have negative amounts of padding, so the value must be 0 or a positive value. Any background applied to your element will display behind the padding, and it is typically used to push content away from the border.
 
 We can control the padding on each side of an element individually using the padding property, or each side individually using the equivalent longhand properties.
+
+## The Box Model and Inline Boxes ##
+Everything above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a <span> element.
+
+In our HTML example, we have a <span> inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The margin, padding, and border are respected but they do not change the relationship of other content to our inline box so the padding and border overlaps other words in the paragraph.
