@@ -86,4 +86,34 @@ To do so, you'll need to increase the height and width of the second block, to a
 If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
 ## Margins, Padding, and Borders ##
+You've already seen the `margin`, `padding`, and `border` properties at work in the examples. THe properties used are **shorthands** and allow us to set all four sides of the box at once. These shorthands also have equivalent longhand properties, which allow control over the different sides of the box individually.
 
+--- MARGIN ---
+The margin is an invisable space around your box. It pushes other elements away from the box. Margins can have positive or negative values. Setting a negative margin on one side of your box can cause it to overlap other things on the page. Whether you are using the standard or alternative box model, the margin is always added after the size of the visible box has been calculated.
+
+We can control all margins of an element at once using the `margin` property, or each side individually using the equivalent longhand properties:
+  `margin-top`
+  `margin-right`
+  `margin-bottom`
+  `margin-left`
+
+**In the HTML example, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.**
+
+**Margin Collapsing**
+A key thing to understand about margins is the concept of margin collapsing. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, which is the size of the largest individual margin. If one or both margins are negative, the amount of the negative value will subtract from the total.
+
+In our HTML example, we have two paragraphs. The top paragraph has a `margin-bottom` of 50px. The second paragraph has a `margin-top` of 30px. The margins have collapsed together so the actual margin between the boxes is 50px and not the total of the two margins.
+
+**You can test this by setting the `margin-top` of paragraph two to 0. The visible margin between the two paragraphs will not change - it retains the 50px set in the `bottom-margin` of paragraph one. If you set it to -10px, you'll see that the overall margin becomes 40px - it substracts from the 50px.**
+
+There are a number of rules that dictate when margins do and do not collapse. The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what's happening.
+
+--- BORDERS ---
+The border is drawn between the margin and the padding of a box. If you are using the standard box model, the size of the border is added to the width and height of the box. If you're using the alternative box model then the size of the border makes the content box smaller as it takes up some of that available width and height.
+
+For styling borders, there are a large number of properties - there are four borders, and each border has a style, width, and color that we might want to manipulate.
+
+--- PADDING ---
+THe padding sits between the border and the content area. Unlike margins you cannot have negative amounts of padding, so the value must be 0 or a positive value. Any background applied to your element will display behind the padding, and it is typically used to push content away from the border.
+
+We can control the padding on each side of an element individually using the padding property, or each side individually using the equivalent longhand properties.
