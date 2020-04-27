@@ -1,0 +1,16 @@
+/* In this task, add to the box:
+    1. A 5px, block, dotted border
+    2. A top margin of 20px
+    3. A right margin of 1em
+    4. A bottom margin of 40px
+    5. A left margin of 2em
+    6. Padding on all sides of 1em */
+
+.box {
+  border: 5px dotted black;
+  margin-top: 20px;
+  margin-right: 1em;
+  margin-bottom: 40px;
+  margin-left: 2em;
+  padding: 1em;
+}
