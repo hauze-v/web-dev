@@ -28,3 +28,31 @@ When we switch the writing mode on an element, we are changing which direction i
 In addition to writing mode we also have text direction. As mentioned, some languages, like Arabic are written horizontally, but right-to-left.
 
 Due to the fact that writing mode and direction of text can change, newer CSS layout methods do not refer to left and right, and top and bottom. Instead they will talk about *start* and *end* along with this idea of inline and block. Don't worry much about it right now, but keep these ideas in mind as you start to look at layout; you'll find it really helpful in your understanding of CSS.
+
+## Logical properties and values ##
+The reason to talk about writing modes and direction at this point in your learning however, is because of the fact that we have already looked at a lot of properties which are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.
+
+Let's look at our two boxes again in our html example - one with a `horizontal-tb` writing mode and one with `vertical-rl`. We'll now give these both these boxes a `width`. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.
+
+What we really want in this scenario, is to essentially swap height and width along with the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode. 
+
+To make this easier, CSS has recently developed a set of mapped properties. These essentially replace physical properties - things like `width` and `height` - with **logical**, or **flow relative** versions.
+
+The property mapped to `width` when in a horizontal writing mode is called `inline-size` - it refers to the size in the inline dimension. The property for `height` is named `block-size` and is the size in the block dimension. You can see how this works in our html example where we've replaced `width` with `inline-size`.
+
+--- LOGICAL MARGIN, BORDER, AND PADDING PROPERTIES ---
+
+In the last two lessons we have learned about CSS box model, and CSS borders. In the margin, border, and padding properties you will find many instances of physical properties, for example `margin-top`, `padding-left`, and `border-bottom`. In the same way that we have mappings for width and height there are mappings for these properties.
+
+The `margin-top` property is mapped to `margin-block-start` - this will always refer to the margin at the start of the block dimension.
+
+The `padding-left` property is mapped to `padding-inline-start`, the padding that is applied to the start of the inline direction. This will be where sentences start in that writing mode. The `border-bottom` property maps to `border-block-end`, which is the border at the end of the block dimension.
+
+--- LOGICAL VALUES ---
+There are also somoe properties that take physical values of `top`, `right`, `bottom`, and `left`. These values also have mappings, to  logical values - `block-start`, `inline-end`, `block-end`, and `inline-start`.
+
+For example, you can float an image left to cause text to wrap round the image. You could replace `left` with `inline-start`.
+
+--- SHOULD YOU USE PHYSICAL OR LOGICAL PROPERTIES? ---
+The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you start also dealing with layout methods such as flexbox and grid.
+

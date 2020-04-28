@@ -1,12 +1,11 @@
+.box {
+  inline-size: 150px;
+}
+
 .horizontal {
   writing-mode: horizontal-tb;
 }
 
 .vertical {
   writing-mode: vertical-rl;
-}
-
-.box {
-  border: 1px solid black;
-  width: 150px;
 }
