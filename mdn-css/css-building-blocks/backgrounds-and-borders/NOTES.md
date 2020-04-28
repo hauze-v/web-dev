@@ -56,7 +56,7 @@ A gradient - when used for a background - acts just like an image and is also se
 --- MULTIPLE BACKGROUND IMAGES ---
 It is also possible to have multiple background images - you specifiy multiple `background-image` values in a single property value, separating each one with a comma. 
 
-When you do this you may end up with background images overlapping each other. The backgrounds will layer with the last listed background image at the bottom fo the stack, and each previous image stacking on top fo the one that follows it in the code.
+When you do this you may end up with background images overlapping each other. The backgrounds will layer with the last listed background image at the bottom fo the stack, and each previous image stacking on top of the one that follows it in the code.
 
 **Note**: Gradients can be happily mixed with regular background images.
 
