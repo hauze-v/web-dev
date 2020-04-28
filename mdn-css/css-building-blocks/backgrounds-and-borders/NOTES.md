@@ -84,5 +84,24 @@ There are a few rules that need to be followed when writing background image sho
 * The value for `background-size` may only be included immediately after `background-position`, separated with the '/' character, like this: `center/80%`.
 
 --- ACCESSIBILITY CONSIDERATIONS WITH BACKGROUNDS ---
-When placing text on top of a background image or color, you should take care that you have enough contrast for the text to be legible for your visitors. If specifying an image, and text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load. 
+When placing text on top of a background image or color, you should take care that you have enough contrast for the text to be legible for your visitors. If specifying an image, and text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
+
+## Borders ##
+When learning about the Box Model, we discoverd how borders affect the size of our box. In this lesson we'll look at how to use borders creatively. Typically when we add borders to an element in CSS we use shorthand property that sets the color, width, and style of the border in one line of CSS.
+
+`.box {border: 1px solid red;}`
+
+**There are a variety of styles that you can use for borders. In the html example we have used a different border style for the four sides of the box. Play with the border style, width, and color to see how they work.**
+
+--- ROUNDED CORNERS ---
+Rounding corners on a box is achieved using the `border-radius` property and associated longhands which relate to each corner of the box. Two lengths or percentanges may be used as a value, the first value defining the horizontal radius, and the second the vertical readius. In a lot of cases you'll only pass in one value, which will be used for both. 
+
+For example, to make all four corners of a box have a 10px radius:
+`.box {border-radius: 10px;}`
+
+Or make the top right corner have a horizontal radius of 1em, and a vertical radius of 10%:
+`.box {border-top-right-radius: 1em 10%;}`
+
+We have set all four corners in the html example, and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for `border-radius` to see the available syntax options.
+
 
