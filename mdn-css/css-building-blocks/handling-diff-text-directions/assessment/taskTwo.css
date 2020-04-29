@@ -1,0 +1,14 @@
+/* Use logical properties to replace `width` and `height` in order to maintain the aspect ratio of the box as it's turned vertically.  */
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  inline-size: 200px;
+  block-size: 100px;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}

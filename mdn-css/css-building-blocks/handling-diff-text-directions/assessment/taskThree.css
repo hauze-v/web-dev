@@ -1,0 +1,16 @@
+/* Use logical versions of the margin, border, and padding properties so that the edges of the box relate to the text rather than following top, left, bottom, and right.  */
+
+.box {
+  width: 150px;
+  height: 150px;
+  border-block-start: 5px solid rebeccapurple;
+  border-inline-end: 5px solid gray;
+  border-block-end: 5px dotted red;
+  border-inline-start: 5px dotted blue;
+  padding-block-start: 40px;
+  margin-block-end: 30px;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
