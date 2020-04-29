@@ -1,0 +1,16 @@
+/* Overflow property takes a few values: hidden, scroll */
+/* Overflow-auto can also be used as a property */
+.box {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+/* There's also the word-break or overflow-wrap properties for long words in small boxes */
+.word {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+  overflow-wrap: break-word;
+}
