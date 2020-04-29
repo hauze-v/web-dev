@@ -32,3 +32,8 @@ You could also scroll on the x axis using `overflow-x`, although this is not a r
 
 **Note**: that you can specify the x and y scrolling using the `overflow` property and passing in two values: 
 `overflow: scroll hidden` would set `overflow-x` to `scroll` and `overflow-y` to `hidden`
+
+If you only want scrollbars to appear if there is more content than can fit in the box, then use `overflow-auto`. 
+
+## Overflow establishes a blcok formatting context ##
+There is a concept in CSS of the **Block Formatting Context (BFC)**. This isn't something you need to worry too much about right now, but it is useful to know that when you us a value of overflow such as `scroll` or `auto` you create a BFC. The result is that the content of the box you have changed the value of `overflow` for becomes a mini layout of its own. Things outside the container cannot poke into the container, and nothing can poke out of that box into the surrounding layout. This is to enable the scrolling behavior, as all content of your box will need to be contained and not overlap other items on the page in order to create a consistent scrolling experience.
