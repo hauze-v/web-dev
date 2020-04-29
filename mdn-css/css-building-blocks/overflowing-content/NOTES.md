@@ -1,1 +1,5 @@
 # Overflowing Content #
+In this lesson we'll look at another important concept in CSS - **overflow**. Overflow is what happens when there is too much content to be contained comfortably inside a box. In this guide you'll learn what it is and how to manage it.
+
+## What is Overflow? ##
+We already know that everything in CSS is a box, and that we can constrain the size of those boxes by giving them values of `width` and `height` (or `inline-size` and `block-size`). Overflow is what happens when you have too much content in a bo, so it won't fit inside it comfortably. CSS gives you various tools to manage this overflow, and it is also a useful cncept to understand at this early stage. You will come across overflow situations quite often when writing CSS, especially when you get deeper into CSS layout.
