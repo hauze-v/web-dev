@@ -1,0 +1,10 @@
+/* 
+  In this task an image is in the box, it is bigger than the dimensions of the box so overflows visibly. Change it to that any image outside of the box is hidden.
+*/
+
+.box {
+  border: 5px solid black;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+}
