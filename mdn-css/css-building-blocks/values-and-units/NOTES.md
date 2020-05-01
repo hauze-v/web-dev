@@ -76,3 +76,16 @@ To start with, we set 16px as theh font size of the <html> element.
 
 **To recap, the rem unit means "The root element's font-size"**. The <li> elements inside the <ul> with a class of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
+--- PERCENTAGES ---
+In a lot of cases a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's `font-size` as a percentage it will be a percentage of the `font-size` of the element's parent. If you use a percentage for a `width` value, it will be the percentage of the `width` of the parent. 
+
+In our html example the two percentage-sized boxes and the two pixel-sized boxes have the same class names. Both sets are 200px and 40% wide respectively.
+
+The difference is that the second set of two boxes is inside a wrapper that is 400 pixels wide. The second 200px wide box is the same width as the first one, but the second 40% box is now 40% of 400px - a lot narrower than the first one!
+
+--- NUMBERS ---
+Some values accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the `opacity` property, which controls the opacity of an element. This property accepts a number between `0` (fully transparent) and `1` (fully opaque).
+
+**Note**: When you use a number in CSS as a value it should not be surrounded in quotes.
+
+## Color ##
