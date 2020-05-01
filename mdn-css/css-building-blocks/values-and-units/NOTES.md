@@ -89,3 +89,18 @@ Some values accept numbers, without any unit added to them. An example of a prop
 **Note**: When you use a number in CSS as a value it should not be surrounded in quotes.
 
 ## Color ##
+The standard color system available in modern computers is 24bit, which allows the display of about 16.7 million distinct colors via a combination of different red, green, and blue channels.
+
+--- COLOR KEYWORDS ---
+There are a number of these keywords, some of which have fairly entertaining names!
+
+--- HEXADECIMAL RGB VALUES ---
+Each hex value consists of a hash symbol (#) followed by six hexadecimal numbers, each of which can take one of 16 values between 0 and f (which represents 15).
+
+--- RGB AND RGBA VALUES ---
+An RGB value is a function - `rgb()` - which is given three parameters that represent the red, green, and blue channel values of the colors, in much the same way as hex value. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 - somewhat easier to understand.
+
+You can also use RGBA colors - these work in exactly the same way as RGB colors, and so you can use any RGB values, however, there is a fourth value that represents the alpha channel of the color, which controls opacity. 
+
+**Note**: Setting an alpha channel on a color has one key difference to using the `opacity` property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you uare specifying opaque.
+
