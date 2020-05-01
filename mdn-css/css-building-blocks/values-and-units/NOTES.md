@@ -104,3 +104,7 @@ You can also use RGBA colors - these work in exactly the same way as RGB colors,
 
 **Note**: Setting an alpha channel on a color has one key difference to using the `opacity` property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you uare specifying opaque.
 
+## Image ##
+The <image> data type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
+
+In our html example, we demonstrate an image and gradient in use as a value for the CSS `background-image` property.
