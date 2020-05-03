@@ -114,3 +114,9 @@ The <position> data type represents a set of 2D coordinates, used to position an
 
 A typical position value consists of two values - the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to center.
 
+## Strings and identifiers ##
+Throughout the examples we've seen places where keywords are used as a value (for example <color> keywords like red, black, rebeccapurple, goldenrod). These keywords are more accurately described as *identifiers*, a special value that CSS understands. As such they are not quoted - they are not treated as strings.
+
+There are places where you use strings in CSS, for example when you specifying generated content. In this case the value is quoted to demonstrate that it is a string.
+
+## Functions ##
