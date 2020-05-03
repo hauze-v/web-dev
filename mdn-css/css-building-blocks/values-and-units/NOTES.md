@@ -120,3 +120,5 @@ Throughout the examples we've seen places where keywords are used as a value (fo
 There are places where you use strings in CSS, for example when you specifying generated content. In this case the value is quoted to demonstrate that it is a string.
 
 ## Functions ##
+In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the develper and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions in action in the colors section - `rgb()`. The value used to return an image from a file - `url()` is also a function.
+
