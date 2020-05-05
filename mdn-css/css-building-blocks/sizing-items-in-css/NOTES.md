@@ -27,3 +27,14 @@ If you set `margins` and `padding` as a percentage you may notice some strange b
 You might expect for exxample the percentage top and bottom margins to be a percentage of the element's height, and the percentage left and right margins to be a percentage of the element's width. However, that's not the case!
 
 When you use margin and padding set in percentages, the value is calculated from the **inline size** - therefore the width when working in a horizontal language. In our example, all of the margins and padding are 10% of the width. This means you can have equal size margins and padding all around the box. This is a fact worth remembering if you do use percentages in this way.
+
+## Min and Max Sizes ##
+In addition to giving things a fixed size, we can ask CSS to give an element a minimum or a maximum size. If you have a box that might contain a variable amount of content, and you always want it to be at *least* a certain height, you could set the `min-height` property on it. The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height. 
+
+This is very useful for dealing with variable amounts of content while avoiding overflow. 
+
+A common use of `max-width` is to cause images to scale down if there is not enough space to display them at their intrinsic width, while making sure they don't become larger than that width.
+
+This technique is used to make images *responsive*, so that when viewed on a smaller device they scale down appropriately. You should however not use this technique to load in really large images and then scale them down in the browser. Images should be appropriately sized to be no larger than they need to be for the largest size they are displayed in the design.
+
+Downloading overly large images will casue your site to become slow, and it can cost users more money if they are on a metered connection.
