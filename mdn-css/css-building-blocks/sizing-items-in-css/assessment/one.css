@@ -1,0 +1,21 @@
+/* 
+  Set the height of the first box to be at least 100px tall, even if there is less content than would cause it to grow to that height, however the content should not overflow if there is more content than fits in 100px.
+
+  Test this box by removing the content from the HTML to make sure you still get 100px tall box even with no content
+
+  The second box should be fixed at 100px tall, so that content will overflow if there is too much
+*/
+
+.box1 {
+  border: 5px solid goldenrod;
+  min-height: 100px;
+  margin: 20px;
+  width: 300px;
+}
+
+.box2 {
+  border: 5px solid goldenrod;
+  height: 100px;
+  margin: 20px;
+  width: 300px;
+}

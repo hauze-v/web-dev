@@ -45,3 +45,4 @@ The viewport - which is the visible area of your page in the browser you are usi
 `1vh` is qual to 1% of the viewport height, and `1vw` is equal to 1% of the viewport width. You can use thse units to size boxes, but also text.
 
 Sizing things according to the viewport can be useful in your designs. For example, if you want a full page hero section to show before the rest of your content, making that part of your page 100vh high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.
+
