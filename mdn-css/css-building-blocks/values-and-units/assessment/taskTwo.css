@@ -1,0 +1,23 @@
+/*
+  In this task you need to set the size of various items of text.
+    The <h1> should be 50px
+    The <h2> should be 2em
+    The <p> elements should be 16pixels
+    The <p> element that is directly after an <h1> should be 120%
+ */
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 + p {
+  font-size: 120%;
+}
