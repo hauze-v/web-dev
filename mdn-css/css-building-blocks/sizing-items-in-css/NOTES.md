@@ -38,3 +38,10 @@ A common use of `max-width` is to cause images to scale down if there is not eno
 This technique is used to make images *responsive*, so that when viewed on a smaller device they scale down appropriately. You should however not use this technique to load in really large images and then scale them down in the browser. Images should be appropriately sized to be no larger than they need to be for the largest size they are displayed in the design.
 
 Downloading overly large images will casue your site to become slow, and it can cost users more money if they are on a metered connection.
+
+## Viewport Units ##
+The viewport - which is the visible area of your page in the browser you are using to view a site - also has a size. In CSS we have units which relate to the size of the viewport - the `vw` unit for viewport width, and `vh` for viewport height. Using these units you can size something relative to the viewport of the user.
+
+`1vh` is qual to 1% of the viewport height, and `1vw` is equal to 1% of the viewport width. You can use thse units to size boxes, but also text.
+
+Sizing things according to the viewport can be useful in your designs. For example, if you want a full page hero section to show before the rest of your content, making that part of your page 100vh high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.
