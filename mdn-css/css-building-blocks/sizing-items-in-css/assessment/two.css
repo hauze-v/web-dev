@@ -1,0 +1,21 @@
+/* 
+  Make the inner box 60% of the width of the outer box.
+
+  The value of the box-sizing property is set to border-box, which means that the total width includes any padding and border.
+
+  You should also give the inner box padding of 10% using the width (or inline size) as the size from which that percentage is calculated.
+*/
+
+* {
+  box-sizing: border-box;
+}
+.box{
+  border: 5px solid black;
+}
+
+.inner {
+  width: 60%;
+  padding: 10%;
+  background-color: rebeccapurple;
+  color: white;
+}
