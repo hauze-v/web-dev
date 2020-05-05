@@ -1,0 +1,10 @@
+.box {
+  border: 5px solid rebeccapurple;
+  height: 30px;
+  width: 200px;
+}
+
+.wrapper {
+  width: 600px;
+  border: 2px solid black;
+}
