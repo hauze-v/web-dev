@@ -1,0 +1,34 @@
+/* 
+
+  Make the form field and button use the same text size as the rest of the form.
+  Give the form field and button 10 px of padding.
+  Give the button a purple background, white foreground, no border and rounded corners of 5px.
+  Use attribute selectors to target the search field and button inside .myform.
+
+*/
+
+button, 
+input, 
+select, 
+textarea { 
+  font-family: inherit; 
+  font-size: 100%; 
+  box-sizing: border-box; 
+  padding: 0; margin: 0; 
+} 
+
+textarea { 
+  overflow: auto; 
+}
+
+input[type="search"],
+input[type="submit"] {
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: purple;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+}
