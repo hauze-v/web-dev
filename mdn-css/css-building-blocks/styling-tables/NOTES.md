@@ -35,3 +35,16 @@ Again there's nothing specific to table here, but it's worthwhile to note a few 
 We've added a `background-image` to the <thead> and <tfoot>, and changed the `color` of all the text inside the header and footer to white (and given it a text-shadow) so it is more readable. You should always make sure your text contrasts well with your backround, so it is readable.
 
 We've also added a linear gradient to the <th> and <td> elements inside the header and footer for a nice bit of texture, as well as giving those elements a bright purple border. It is useful to have multiple nested elements available so you can layer styles on top of one another. Yes, we could have put both the background image and the linear gradient on the <thead> and <tfoot> elements using multiple background images, but we decided to do it separately for the benefit of older browsers that don't support multiple background images or linear gradients.
+
+### Zebra Striping ###
+We wanted to dedicate a separate section to showing you how to implement **zebra stripes** - alternating rows of color that make the different data rows in your table easier to parse and read.
+
+Earlier we saw the `:nth-child` selector being used to select specific child elements. It can also be given a formula as a parameter, so it will select a sequence of elements. The formula `2n-1` would select all the odd numbered children (1,3,5,etc.) and the formula `2n` would select all the even numbered children (2,4,6,etc). 
+
+We've used the `odd` and `even` keywords in our code, which do exactly the same things as the aforementioned formulae.
+
+We've also added a repeating background tile to all the body rows, which is just a bit of noise (a semi-transparent .png with a bit of visual distortion on it) to provide some texture.
+
+Lastly, we've given the entire table a solid background color so that browsers that don't support the `:nth-child` select still have a background for their body rows.
+
+--- STYLING THE CAPTION ---
