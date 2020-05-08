@@ -28,3 +28,10 @@ There's nothing really specific  to tables here; we are generally tweaking the f
   We've set some `letter-spacing` on the headings and cells, as we feel it aids readability. Again, mostly a stylistic choice.
   We've center-aligned the text in the table cells inside the <tbody> so that they line up with the headings. By default, cells are given a `text-align` value of `left`, and headings are given a value of `center`, but generally it looks better to have alignments set the same for both. The default bold weight on the heading fonts is enough to differentiate their look.
   We've right-aligned the heading inside the <tfoot> so that it is visually associated better with its data poiint.
+
+--- GRAPHICS AND COLORS ---
+Again there's nothing specific to table here, but it's worthwhile to note a few things.
+
+We've added a `background-image` to the <thead> and <tfoot>, and changed the `color` of all the text inside the header and footer to white (and given it a text-shadow) so it is more readable. You should always make sure your text contrasts well with your backround, so it is readable.
+
+We've also added a linear gradient to the <th> and <td> elements inside the header and footer for a nice bit of texture, as well as giving those elements a bright purple border. It is useful to have multiple nested elements available so you can layer styles on top of one another. Yes, we could have put both the background image and the linear gradient on the <thead> and <tfoot> elements using multiple background images, but we decided to do it separately for the benefit of older browsers that don't support multiple background images or linear gradients.
