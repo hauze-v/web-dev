@@ -1,0 +1,2 @@
+# Styling Tables #
+Styling an HTML table isn't the most glamorrous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
