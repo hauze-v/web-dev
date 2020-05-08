@@ -27,6 +27,7 @@ th, td {
   padding: 20px;
 }
 
+
 /* typography */
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -52,6 +53,7 @@ tfoot th {
   text-align: right;
 }
 
+
 /* graphics and colors */
 thead, tfoot {
   background: url(assets/leopardskin.jpg);
@@ -63,6 +65,7 @@ thead th, tfoot th, tfoot td {
   background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
   border: 3px solid purple;
 }
+
 
 /* zebra stripes */
 tbody tr:nth-child(odd) {
@@ -79,4 +82,16 @@ tbody tr {
 
 table {
   background-color: #ff33cc;
+}
+
+
+/* styling the caption */
+caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
 }

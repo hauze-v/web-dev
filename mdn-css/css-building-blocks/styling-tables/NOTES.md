@@ -48,3 +48,6 @@ We've also added a repeating background tile to all the body rows, which is just
 Lastly, we've given the entire table a solid background color so that browsers that don't support the `:nth-child` select still have a background for their body rows.
 
 --- STYLING THE CAPTION ---
+There is one last thing to do with our table - style the caption.
+
+There's nothing remarkable going on here, except for the `caption-side` property, which has been given a value of `bottom`. This cause the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look!
