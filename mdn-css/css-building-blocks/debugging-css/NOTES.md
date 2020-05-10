@@ -31,3 +31,42 @@ Remember, `content-box` takes the width you give and adds the `padding` and `bor
 Sometimes durring development, but in particular when you need to edit the CSS on an existing site, you will find yourself having a hard time getting some CSS to apply. No matter what you do, the element just doesn't seem to take the CSS. What is generally happening here is that a more specific selector is overriding your changes, and here DevTools will really help you out.
 
 When you inspect an element with DevTools it will show you which properties apply by showing less specific ones as being crossed out.
+
+## Debugging problems in CSS ##
+What steps should you take when tring to solve a problem in CSS using the DevTools?
+
+1. Take a step back from the problem
+
+Any coding problem can be frustrating, especially CSS problems because you often don't get an error message to search for online to help with finding a solution. If you are becoming frustrated, take a step away from the issue for a while - go for a walk, grab a drink, chat to a co-worker. Sometimes the solution magically appears when you stop thinking about the problem, and even if not, working on it when feeling refreshed will be much easier.
+
+2. Do you have valid HTML and CSS?
+
+Browsers expect your CSS and HTML to be correctly written, however browsers are also very forgiving and will try their best to display your webpages even if you have errors in the markup or stylesheet. If you have mistakes in your code the browsers needs to make a guess at what you meant, and it might make a different decision to what you had in mind. In addition, two different browsers might cope with the problem two different ways. A good first step therefore is to run you HTML and CSS through a validator, to pick up and fix any errors.
+
+3. Is the property and value supported by the browser you are testing with?
+
+Browsers simply ignore CSS they don't understand. DevTools will generally highlight unsupported properties and values in some way. In the screenshot below the browser does not support the subgrid value `grid-template-columns` and so it's showing it crossed-out and with a little yellow ! mark.
+
+4. Is something else overriding your CSS?
+
+This is where the information you have learned about specificity will come in very useful. If you have something more specific overriding what you are trying to do, you can enter into a very frustrating game of trying to work out what. However, as described above, DevTools will show you what CSS is applying and you can work out how to make the new selector specific enough to override it.
+
+5. Make a reduced test case of the problem
+
+If the issue isn't solved by the steps above, then you will need to do some more investigating. The best thing to do at this point is to create something known as a reduced test case. being able to "reduce an issue" is a really useful skill. It will help you find problems in your own code and that of your colleagues, and will also enable you to report bugs and ask for help more effectively.
+
+A reduced test case is a code example that demonstrates the problem in the simplest possible way, with unrelated surrounding content and styling removed. This will often mean taking the problematic code out of your layout to make a small example which only shows that code or feature.
+
+To create a reduced test case:
+
+  1. If your markup is dynamically generated - for example via a CMS - make a satic version of the output that shows the problem. Using something like Codepen.io is useful for this. You can start by doing view source on the page and copying the HTML into Codepen, then grab any relevant CSS and JavaScript and include it too.
+
+  2. If removing the JavaScript does not make the issue go away, don't include the JavaScript.
+
+  3. Remove any HTML that does not contribute to the issue. Remove components or even main elements of the layout. Again, try to get down to the smallest amount of code that still shows the issue.
+
+  4. Remove any CSS that doesn't impact the issue.
+
+  5. Include comments!
+
+A reduced test case gives you something to ask for help with, by posting to a forum, or showing a co-worker. You are much more likely to get help if you can show that you have done the work of reducing the problem and identifying exactly where it happens, before asking for help.
