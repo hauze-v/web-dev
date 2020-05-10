@@ -28,3 +28,6 @@ In this panel, one of the detailed properties is the `box-sizing` property, whic
 Remember, `content-box` takes the width you give and adds the `padding` and `border`, while `border-box` takes the width you give as the total. So the true width is subtracted from the `padding` and `border-box`.
 
 ## Solving specificity issues ##
+Sometimes durring development, but in particular when you need to edit the CSS on an existing site, you will find yourself having a hard time getting some CSS to apply. No matter what you do, the element just doesn't seem to take the CSS. What is generally happening here is that a more specific selector is overriding your changes, and here DevTools will really help you out.
+
+When you inspect an element with DevTools it will show you which properties apply by showing less specific ones as being crossed out.
