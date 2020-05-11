@@ -106,3 +106,51 @@ For example, we might have an online store as part of the site, with a lot of CS
 This can make it easier to keep your CSS organized, and also means that if multiple people are working on the CSS you will have fewer situations where two people need to work on the same stylesheet at once, leading to conflicts in source control.
 
 ### Other tools that can help ###
+CSS itself doesn't have much in the way of built-in organization so it's up to you to create consistency and rules around how you write CSS. The web community has also developed various tools and approaches that can help you manage larger CSS projects. As they may be helpful for you to investigate, and you are likely to come across these things when working with other people, we've included a short guide to some of these below.
+
+--- CSS METHODOLOGIES ---
+These methodologies are essentially CSS coding guides that take a very structured approach to writing and organising CSS. Typically they tend to result in more verbose use of CSS than you might have if you wrote and optimised every selector to a custom set of rules for that project.
+
+However, you do gain a lot of structure by adopting one and, as many of these systems are very widly used, other developers are more likely to understand the approach you are using and be able to write their CSS in the same way, rather than having to work out your own personal methodology from scratch.
+
+#### OOCSS ####
+
+Object Oriented CSS. The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as The Media Object. This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.
+
+If you are not taking an OOCSS approach you might create custom CSS for the different places this pattern is used, for example creating a class called `comment` with a bunch of rules for the component parts, then a class called `list-item` with almost the same rules as the `commont` class except for some tiny differences. 
+
+In OOCSS, you would create one pattern called `media` that would have all of the common CSS for both patterns - a base class for things that are generally the shape of the media object. Then we'd add an additional class to deal with those tiny differences, thus extending that styling in specific ways.
+
+#### BEM ####
+BEM stands for Block Element Modifier. In BEM a block is a standalone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it's in. A modifer is a flag on a block or element that changes the styling or behavior. You will be able to recognise code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classess applied to this HTML from the page about BEM naming conventions:
+
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input
+    class="form__submit form__submit--disabled"
+    type="submit" />
+</form>
+
+The additional classes are similar to those used in the OOCSS example, however they use the strict naming conventions of BEM.
+
+BEM is widely used in larger web projects and many people write their CSS in this way. It is likely that you will come across exxamples, even in tutorials, that use BEM syntax, without mentionoing why the CSS is structured in such a way.
+
+--- BUILD SYSTEMS for CSS ---
+Another way to organize your CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools which we refer to as *pre-processors* and *post-processors*. 
+
+A *pre-processor* runs over your raw files and turns them into a stylesheet, whereas a *post-processor* takes your finished stylesheet and does something to it - perhaps to optimize it in order for it to load faster.
+
+Many code editors can do this for you, or you can install command line tools to help.
+
+The most popular pre-processor is Sass. This is not a Sass tutorial, but I'll briefly go over some features of Sass.
+
+#### Defining variables ####
+CSS now has native custom properties, making this feature increasingly less important, however one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then use that variable around the project. This means that if you realize you have used the wrong shade of blue, you only need change it in one place.
+
+If we created a variable called `$base-color` as in the first line below, we could then use it through the stylesheeet anywhere that required that color.
+
+$base-color: #c6538c;
+
+.alert {
+  border: 1px solid $base-color;
+}
