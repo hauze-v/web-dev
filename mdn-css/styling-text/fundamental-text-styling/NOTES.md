@@ -58,4 +58,20 @@ Things become more tricky when you start altering the font size of nested elemen
 When sizing your text, it's usually a good idea to set the base `font-size` of the document to 10px, so that then the math is a lot easier to work out - `rem` values are then the pixel font size divided by 10, not 16. It's a good idea to list all of your `font-size` rulesets in a designated area in your stylesheet, so they are easy to find.
 
 --- FONT STYLE, FONT WEIGHT, TEXT TRANSFORM, AND TEXT DECORATION ---
+CSS provides four common properties to alter the visual weight/emphasis of text: 
 
+* `font-style`: Used to turn italic text on and off.
+* `font-weight`: Sets how bold the text is
+* `text-transform`: Allows you to set your font to be transformed. Values include:
+  * `none`: prevents any transformation
+  * `uppercase`
+  * `lowercase`
+  * `capitalize`
+  * `full-width`: Transforms all glyphs to be w r i t t e n i n s i d e a f i x e d - w i d t h, similar to monospace font, allowing alligning of e.g. Latin characters along with Asian language glyphs.
+* `text-decoration`: Sets/unsets text decoration on fonts (you'll mainly use this to unset the default underline on links when styling them). Available values are:
+  * `none`
+  * `underline`
+  * `overline`
+  * `line-through`
+
+You should note that `text-docoration` can accept multiple values at once, if you want to add multiple decorations simultaneously.
