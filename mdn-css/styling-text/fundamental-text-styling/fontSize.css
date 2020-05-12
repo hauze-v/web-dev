@@ -6,8 +6,10 @@ html {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 10rem;
   text-transform: capitalize;
+  text-shadow: 1px 1px 1px red,
+               2px 2px 2px blue;
 }
 
 h1 + p {

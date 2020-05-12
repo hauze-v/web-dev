@@ -75,3 +75,19 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
   * `line-through`
 
 You should note that `text-docoration` can accept multiple values at once, if you want to add multiple decorations simultaneously.
+
+--- TEXT DROP SHADOWS ---
+You can apply drop shadows to your text using the `text-shadow` property. This takes up to four values (properties) as described below:
+
+  1. The horizontal offset of the shadow from the original text - commonly used with `px`; positive values move the shadow right, and negative values left. (required value)
+
+  2. The vertical offset which behaves basically the same way as horizontal. (required value)
+
+  3. The blur radius - a higher value means the shadow is dispersed more widely. If this value is not included it defaults to 0 which means no blur. 
+
+  4. The base color of the shadow, which can take any CSS color unit, if not included it defaults to black
+
+You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
+
+text-shadow: 1px 1px 1px red,
+             2px 2px 1px red;
