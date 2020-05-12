@@ -91,3 +91,20 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 text-shadow: 1px 1px 1px red,
              2px 2px 1px red;
+
+
+## Text layout ##
+
+--- TEXT ALIGNMENT ---
+The `text-align` property is used to control how text is aligned within its containing content box. The available values are as follows, and work in pretty much the same way as they do in a regular word processor application:
+  * `left`: left-justifies the text
+  * `right`: right-justifies the text
+  * `center`: centers the text
+  * `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully - it can look terrible, especially when applied to a paragraph with lots of long words in it.
+
+--- LINE HEIGHT ---
+The `line-height` property sets the height of each line of text - this can take most length and size units, but can also take a unitless value, which acts as a multiplier and is generally considered the best option - the `font-size` is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 - 2 (double spaced). So to set our lines of text to 1.6 times the height of the font, you'd use this:
+
+`line-height: 1.6;`
+
+--- LETTER AND WORD SPACING ---
