@@ -1,0 +1,16 @@
+/* font sizes should have their own designated area in your stylesheet */
+
+/* best to set root element font-size to 10 for easier math using em and rem */
+html {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: red;
+  font-family: Helvetica, Arial, sans-serif;
+}
