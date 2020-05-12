@@ -1,0 +1,9 @@
+p {
+  color: red;
+  font-family: arial;
+}
+
+/* font stack example */
+h1 {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
