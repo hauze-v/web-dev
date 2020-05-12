@@ -108,3 +108,26 @@ The `line-height` property sets the height of each line of text - this can take 
 `line-height: 1.6;`
 
 --- LETTER AND WORD SPACING ---
+The `letter-spacing` and `word-spacing` properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font.
+
+--- OTHER PROPERTIES WORTH LOOKING AT ---
+Once you become used to using the above, you should also explore the following: 
+
+Font styles:
+  * `font-variant` - switch between small caps and normal font alternatives
+  * `font-kerning` - switch font kerning options on and off
+  * `font-feature-settings` - switch various OpenType font features on and off
+  * `font-variant-alternates` - control the use of alternate glyphs for a given font-face
+  * `font-variant-caps` - control the use of alternate capital glyphs
+  * `font-variant-east-asign` - control the usuage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
+  * `font-variant-ligatures` - control which ligatures and contextual forms are used in text
+
+Text layout styles: 
+  * `text-indent` - specify how much horizontal space should be left before the begining of the first line of the text content
+  * `text-overflow` - define how overflowed content that is not displayed is signaled to users
+  * `white-space` - define how whitespace and associated line breaks inside the element are handled
+  * `word-break` - specify whether to break lines within words
+  * `hyphens` - switch on and off hyphenation for supported languages
+
+
+## Font shorthand ##
