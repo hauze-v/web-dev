@@ -131,3 +131,7 @@ Text layout styles:
 
 
 ## Font shorthand ##
+Many font properties can also be set through the shorthand property `font`. These are written in the following order: `font-style`, `font-variant`, `font-weight`, `font-stretch`, `font-size`, `line-height`, and `font-family`.
+
+Among all those properties, only `font-size` and `font-family` are required when using the `font` shorhand property.
+

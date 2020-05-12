@@ -11,3 +11,8 @@ p::first-line {
   letter-spacing: 4px;
   word-spacing: 4px;
 }
+
+/* Full example of font shorthand property and values */
+h1 {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}
