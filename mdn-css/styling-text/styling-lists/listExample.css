@@ -1,0 +1,35 @@
+/* || General Styles || */
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  /* remember it's good practice to make the default font-size 10px for easier maths */
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul, ol, dl, p {
+  font-size: 1.5rem;
+  /* this means that each paragraph and list will have the same font size and top and bottom spacing, helping to keep the vertical rhythm consistent */
+}
+
+li, p {
+  line-height: 1.5;
+  /* this will also help to keep the vertical rhythm consistent */
+}
+
+/* Description list styles */
+
+dd, dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.5rem;
+}
