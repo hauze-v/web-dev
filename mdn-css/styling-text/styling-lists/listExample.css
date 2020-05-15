@@ -33,3 +33,23 @@ dt {
 dd {
   margin-bottom: 1.5rem;
 }
+
+/* || Bullet Styles || */
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+/* custom bullet point image using background properties */
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2rem;
+  background-image: url(star.png);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
