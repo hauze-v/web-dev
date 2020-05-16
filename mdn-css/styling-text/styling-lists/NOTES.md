@@ -52,3 +52,21 @@ ul {
 }
 
 The values can be listed in any order, and you can use one, two, or all three. If both a `type` and an `image` are specified, the type is used as a fallback if the image can't be laoded for some reason.
+
+## Controlling list counting ##
+Sometimes you might want to count differently on an ordered list - e.g. starting from a number other than 1, or counting backwards, or couting in steps of more than 1. 
+
+--- START ---
+The `start` attribute allows you to start the list counting from a number other than 1.
+
+--- REVERSED ---
+The `reversed` attribute will start the list counting down instead of up.
+
+**Note**: If there are more list items in a reversed list than the value of the `start` attribute, the count will continue to zero and then into negative values.
+
+--- VALUE ---
+The `value` attribute allows you to set your list items to specific numerical values.
+
+**Note**: Even if you're using a non-number `list-style-type`, you still need to use the equivalent numerical values in the `value` attribute.
+
+## Active Learning: Styling a nested list ##
