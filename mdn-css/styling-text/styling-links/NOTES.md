@@ -41,4 +41,17 @@ So what did we do in the example styles?
     * Omitting the border color when using `border-bottom` will make it the color of the element's text.
   * Finally, the `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
 
-  ## Including icons in links ##
+## Including icons in links ##
+A common practice is to include icons on links to proivde more of an indicator as to what kind of content the link points to. Let's look at a simple example that adds an icon to external links. Such an icon usually looks like a little arrow pointing out of a box.
+
+So what's happening with the icon example CSS?
+
+The last rule is interesting - here we are inserting a custom background iamge on external links in similar manner to how we handled custom bullets on list items - however, this time we're using `background` shorthand instead of individual properties.
+
+We set the path to the image we want to insert, specify `no-repeat` so we only get one copy inserted, and then specify the position as 100% of the way over to the right of the text content, and 0 pixels from the top.
+
+We also use `background-size` to specify the size we want the background image tobe shown at -it's useful to have a larger icon and then resize it like this as needed for responsive web design purposes.
+
+Finally, we set some `padding-right` on the links to make space for the background image to appearin, so we aren't overlapping it with text.
+
+Well, if you are writing your HTML links properly, you should only be using absolute URLs for external links - it is more efficient to use relative links to link to other parts of your own site. The text "http" should therefore only appear in external links, and we can select this with an attribute selector `a[href*="http"]` selects <a> elements, but only if they have an `href` with a value that contains "http" somewhere inside it.
