@@ -55,3 +55,17 @@ We also use `background-size` to specify the size we want the background image t
 Finally, we set some `padding-right` on the links to make space for the background image to appearin, so we aren't overlapping it with text.
 
 Well, if you are writing your HTML links properly, you should only be using absolute URLs for external links - it is more efficient to use relative links to link to other parts of your own site. The text "http" should therefore only appear in external links, and we can select this with an attribute selector `a[href*="http"]` selects <a> elements, but only if they have an `href` with a value that contains "http" somewhere inside it.
+
+## Styling links as buttons ##
+States like hover can be used to style many different elements, not just links - you might want to style the hover state of paragraphs, list items, or other things.
+
+In addition, links are commonly styled to look and behave like buttons. A website navigation menu is usually marked up as a list containing links, and this can be easily styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site.
+
+What's going on in the CSS?
+  * Our second rule removes the default padding from the <ul> element, and sets its width to span 100% of the outer container (the <body>, in this case).
+  * <li> elements are normally block by default meaning that they will sit on their own lines. In this case, we are creating a horizontal list of links, so in the third rule we set the `display` property to `inline`, which causes the list of items to sit on the same line as one another - behaving like inline elements.
+  * The 4th rule - which styles the <a> element - is the most complicated here; let's go through it step by step
+    * We turn off the default styling `text-decoration` and `outline`. We don't want these spoiling our look.
+    * Next, we set the `display` to `inline-block` - <a> elements are inline by default and, while we don't want them to spill onto their own lines like a value of `block` would achieve, we do want to be able to size them. `inline-block` allows us to do this.
+    * Sizing: we want to fill up the whole width of the <ul>, leave a little margin between each button, and we have 5 buttons that should be the same size. To do this, we set the `width` to 19.5% and the `margin-right` to 0.625%.
+    * You'll notice that this all adds up to 100.625%, which would make the last button overflow the <ul> and fall down to the next line. However, we take it back down to 100% using the next rule.
