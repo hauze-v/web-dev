@@ -1,0 +1,44 @@
+# Styling Links #
+
+## Let's look at some links ##
+
+--- LINK STATES ---
+The first thing to understand is the concept of link states - different states that links can exist, which can be styled using different pseudo-classes:
+
+* **Link (unvisited)**: The default state that a link resides in, when it isn't in any other state. This can be styled using the `:link` pseudo class.
+* **Visited**: A link when it has been visited (exists in the browser's history), styled using the `:visited` pseudo class.
+* **Hoever**: A link when it is being hovered over by a user's mouse pointer, styled using the `:hover` pseudo class.
+* **Focus**: A link when it has been focused (for example moved to by a keyboard user using the Tab key or simiilar, or programmatically focused using `HTMLElement.focus())` - this is styled using the `:focus` pseudo class.
+* **Active**: A link when it is being activated (e.g. clicked on), styled using the `:active` pseudo class.
+
+--- DEFAULT STYLES ---
+The following example illustrates what a link will behave like by default
+
+You'll notice a few things as you explore default link styles:
+  * Links are underlined
+  * Unvisited links are blue
+  * Visited links are purple
+  * Hovering a link makes the mouse pointer change to a little hand icon
+  * Focused links have an outline around them - you should be able to focus on the links on this page with the keyboard by pressing the tab key
+  * Active links are red (Try holding down the mouse button on the link as you click it).
+
+Link styling best practices:
+  * Use underlining for links, but not for other things. If you don't want to underline links, at least highlight them in some other way.
+  * Make them react in some way when hovered/focused, and in a slightly different way when activated.
+
+The default styles can be turned off/changed using the following CSS properties:
+  * `color` for the text color
+  * `cursor` for the mouse pointer style - you shouldn't turn this off unless you've got a very good reason.
+  * `outline` for the text outline (an outline is similar to a border, the only difference being that border takes up space in the box and an outline doesn't; it just sits over the top of the background). The outline is a useful accessibility aid, so think twice before turning it off; you should at least double up the styles given to the link hover state on the focus state too.
+
+--- STYLING SOME LINKS ---
+So what did we do in the example styles?
+  * The first two rules are basic
+  * The third trule uses the a selector to get rid of the default text underline and focus outline (which varies across browsers anyway), and adds a tiny amount of padding to each link - all of this will become clear later on.
+  * Next, we use the `a:link` and `a:visited` selectors to set a couple of color variations on unvisited and visited links
+  * The next two rules use `a:foucs` and `a:hover` to set focused and hovered links to have different background colors, plus an underline to make the link stand out even more.
+    * The underline has been created using the `border-bottom`, not `text-decoration` - some people prefer it because it offers better styling options.
+    * Omitting the border color when using `border-bottom` will make it the color of the element's text.
+  * Finally, the `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
+
+  ## Including icons in links ##
