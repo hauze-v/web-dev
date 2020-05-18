@@ -84,4 +84,22 @@ Most of these services are easy to use, so we won't cover them in great detail.
   6. Then you need to copy the CSS declarations listed into your CSS as appropriate, to apply the custom fonts to your HTML.
 
   ## @font-face in more detail ##
-  
+@font-face {
+  font-family: 'ciclefina';
+  src: url('fonts/cicle_fina-webfont.eot');
+  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
+         url('fonts/cicle_fina-webfont.woff') format('woff'),
+         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
+         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+Referring back to our example and the code that Fontsquirrel generated for you, we call this "bulletproof @font-face syntax", after a post by Paul Irish from early on when @font-face started to get popular. Let's walk through the code and see what it does:
+  * font-family: this line specifies the name you want to refer to the font as. You can put this as anything you like, as long as you use it consistently throughout your CSS.
+  * src: these lines specify the paths to the font files to be imported into your CSS (the url part), and the format of each font file (the format part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster.
+  * font-weight/font-style: these lines specify what weight the font has, and whether it's italic or not. If you're importing multiple weights of the same font, you can specify what their weight/style is and then use different values of font-weight/font-style to choose between them, rather than having to call all the different members of the font family different names.
+
+## Variable fonts ##
+There is a newer font technology available in browsers called variable fonts - these are fonts that allow many different variations of a typeface to be incorportated into a single file, rather than having a separate font file for every width, weight, or style.
