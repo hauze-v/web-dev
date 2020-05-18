@@ -70,3 +70,18 @@ Inside the unzipped webfontkit directory  you'll see three useful items:
     4. Now you can use these fonts in your font stacks, just like any web safe or default system font.
 
 ## Using an online font service ##
+Online font services generally store and serve fonts for you, so you don't have to worry about writing the `@font-face` code, and generally just need to insert a simple line or two of code into your site to make everything work.
+
+Most of these services are subscription based (Adobe Fonts, Cloud.typography), with the notable exception of Google Fonts, a useful free service, especially for rapid testing worrk and writing demos.
+
+Most of these services are easy to use, so we won't cover them in great detail.
+
+  1. Go to Google fonts
+  2. use the filters on the left-hand side to display the kinds of fonts you want to choose and choose a couple of fonts you like
+  3. To select a font family, press the + button alongside it
+  4. When you've chosen the font families, press the [Number] *Families Selected* bar at the bottom of the page.
+  5. In the resulting screen, you first need to copy the line of HTML code shown and paste it into the head of the HTML file. Put it above the exisiting <link> element, so that the font is imported before you try to use it in your CSS.
+  6. Then you need to copy the CSS declarations listed into your CSS as appropriate, to apply the custom fonts to your HTML.
+
+  ## @font-face in more detail ##
+  
