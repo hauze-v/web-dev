@@ -69,3 +69,4 @@ What's going on in the CSS?
     * Next, we set the `display` to `inline-block` - <a> elements are inline by default and, while we don't want them to spill onto their own lines like a value of `block` would achieve, we do want to be able to size them. `inline-block` allows us to do this.
     * Sizing: we want to fill up the whole width of the <ul>, leave a little margin between each button, and we have 5 buttons that should be the same size. To do this, we set the `width` to 19.5% and the `margin-right` to 0.625%.
     * You'll notice that this all adds up to 100.625%, which would make the last button overflow the <ul> and fall down to the next line. However, we take it back down to 100% using the next rule.
+
