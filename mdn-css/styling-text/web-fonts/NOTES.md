@@ -36,3 +36,37 @@ There are two important things to bear in mind about web fonts:
   2. Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
 
 ## Active learning: A web font example ##
+
+--- FINDING FONTS ---
+For this example, we'll use two web fonts, one for the headings, and one for the body text. To start with, we need to find the font files that contain the fonts. fonts are created by font foundries and are stored in different file formats. There are generally three types of sites where you can obtain fonts: 
+  * A free font distributor: This is a site that makes free fonts available for download (font squirrel, dafont, and everything fonts).
+  * A paid font distributor: This is a site that makes font available for a charge, such as fonts.com or myfonts.com. You can also buy fonts directly from font foundries
+  * An online font service: This is a site that stores and serves the fonts for you, making the whole process easier
+
+Download two fonts from FontSquirrel and unzip them. Copy them into your working directory.
+
+--- GENERATING THE REQUIRED CODE ---
+  1. Make sure you have satisfied any licensing requirement, if you are going to use this in a commericial and/or Web Project.
+  2. Go to the Fontsquirrel Webfont Generator
+  3. Upload youru two font files using the *Upload Fonts Button*
+  4. Check the checkbox labeled "Yes, the fonts i'm uploading are legally elligible for the web embedding."
+  5. Click *download your kit*.
+
+After the generator has finished processing, you should get a ZIP file to download -- save it in the same directory as your HTML and CSS.
+
+--- IMPLEMENTING THE CODE IN YOUR DEMO ---
+Inside the unzipped webfontkit directory  you'll see three useful items:
+  * Multiple versions of each font: (for example .ttf, .woff, .woff2, etc.). As mentioned above, multiple fonts are needed for cross browser support -
+  this is Fontsquirrel's way of making sure you've got evrything you need.
+  
+  * A demo HTML file for each font - load these in your browser to see what the font will look like in different usage contexts.
+
+  * A stylesheet.css file, which contains the generated `@font-face` code you'll need.
+
+  To implement these fonts in your demo, follow these steps:
+    1. Rename the unzipped directory to something easy and simple, like fonts.
+    2. Open up the stylesheet.css file and copy both the `@font-face` blocks contained inside into your `web-font-start.css` file - you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.
+    3. Each of the url() functions points to a foint file that we want to import into our CSS - we need to make sure the paths to the files are correct, so add fonts/ to the start of each path (adjust as necessary).
+    4. Now you can use these fonts in your font stacks, just like any web safe or default system font.
+
+## Using an online font service ##
