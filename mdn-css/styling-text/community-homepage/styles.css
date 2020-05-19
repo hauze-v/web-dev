@@ -1,0 +1,152 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Serif Pro', serif;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+  
+}
+
+footer {
+  margin-bottom: 10px;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+/* || General Styles || */
+
+h1,
+h2 {
+  font-family: 'Arbutus Slab', serif;
+  letter-spacing: 3px;
+}
+
+body {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+header {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p,
+ul,
+ol,
+li {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+h2+p {
+  text-indent: 20px;
+}
+
+/* || Styling Links || */
+a {
+  outline: none;
+}
+
+a:link {
+  color: #aa6666;
+}
+
+a:visited {
+  color: #753535
+}
+
+a:focus {
+  color: 753535;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  border-right: 2px solid #aa6666;
+  border-left: 2px solid #aa6666;
+  text-decoration: none;
+  color: pink;
+}
+
+/* Add external link icon */
+a[href*="http"] {
+  background: url('images/icons8-external-link-64\(1\).png') no-repeat 100% 2.8px;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+
+/* || Styling Lists || */
+#courses,
+#lessons {
+  list-style-type: square;
+}
+
+/* || Nav Bar || */
+#navbar {
+  list-style-type: none;
+}
+
+#navbar li a {
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+#navbar li a:link, 
+#navbar li a:visited, 
+#navbar li a:focus {
+  border: 1px solid #aa6666;
+}
