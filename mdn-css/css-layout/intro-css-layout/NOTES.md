@@ -35,3 +35,12 @@ The main methods of achieving page layout in CSS are all values of the `display`
 In addition to being able to change the default presentation by turning an item from `block` to `inline` and vice versa, there are some bigger layout methods that start out as a value of display. However, when using these, you will generally need to invoke additional properties. The two values most important for our purposes when discussing layout are `display: flex` and `display: grid`.
 
 ## Flexbox ##
+Flexbox is the shortname for the Flexible Box Layout Module, designed to make it easy for us to lay things out in one dimension - either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items.
+
+The HTML markup below gives us a containing element, with a class of `wrapper`, inside which are three <div> elements. By default these would display as block elements, below one another.
+
+However, if we add `display: flex` to the parent, the three items now arrange themselves into columns. This is due to them becoming `flex items`. They are displayed in a row, because the initial value of `flex-direction` set ont their parent is row. They all appear to stretch to the height of the tallest item, because the initial value of the `align-items` property set on their parent is `stretch`. The items all line up at the start of the container, leaving any extra space at the end of the row.
+
+In addition to the above properties that can be applied to the flex container, there are properties that can be applied to the flex items. These properties, among other things, can change the way that items flex, enabling them to expand and contract to fit into the available space.
+
+As a simple example, we can add the `flex` property to all of our child items, with a value of 1. This will casue all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become widerr; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it - they will adjust size to take up the same amount of space, whatever it is.
