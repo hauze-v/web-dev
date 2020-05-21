@@ -43,4 +43,15 @@ However, if we add `display: flex` to the parent, the three items now arrange th
 
 In addition to the above properties that can be applied to the flex container, there are properties that can be applied to the flex items. These properties, among other things, can change the way that items flex, enabling them to expand and contract to fit into the available space.
 
-As a simple example, we can add the `flex` property to all of our child items, with a value of 1. This will casue all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become widerr; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it - they will adjust size to take up the same amount of space, whatever it is.
+As a simple example, we can add the `flex` property to all of our child items, with a value of 1. This will casue all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it - they will adjust size to take up the same amount of space, whatever it is.
+
+## Grid Layout ##
+While flexbox is designed for one-dimentional layout, Grid Layout is designed for two dimensions - lining things up in rows and columns.
+
+Once again, you can switch on Grid Layout with a specific value of `display: grid`. Below example is similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we are also defining some row and column tracks on the parent using the `grid-template-rows` and `grid-template-columns` properties respectively. We've defined three columns each for `1fr` and two rows of `100px`. You don't need to put any rules on the child elements; they're automatically placed into the cells our grid has created.
+
+Once you have a grid, you can explicitly place your items on it, rather than rerlying on the auto-placement behavior seen in the example. In our second example, we've defined the same grid, but this time with three child items. We've set the start and end line of each item using the `grid-column` and `grid-row` properties. This causes the items to span multiple tracks.
+
+**Note**: These two examples are just a small part of the power of Grid layout; to find out more, see MDN's Grid Layout article.
+
+The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.
