@@ -29,3 +29,9 @@ CSS page layout techniques allow us to take elements contained in a web page and
     * **Table layout** - features designed for styling the parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
     * **Multi-column layout** - the multi-column layout properties can cause the content of a block to layout in columns, as you might see in a newspaper.
 
+## The display property ##
+The main methods of achieving page layout in CSS are all values of the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a value of `display`, used as the default way that elements they are set on behave. For example, the fact that paragraphs in English display one below the other is due to the fact that they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the <a> element is `display: inline` by default.
+
+In addition to being able to change the default presentation by turning an item from `block` to `inline` and vice versa, there are some bigger layout methods that start out as a value of display. However, when using these, you will generally need to invoke additional properties. The two values most important for our purposes when discussing layout are `display: flex` and `display: grid`.
+
+## Flexbox ##
