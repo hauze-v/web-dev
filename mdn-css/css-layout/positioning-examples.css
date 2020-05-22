@@ -20,3 +20,11 @@ p {
   top: 30px;
   left: 30px;
 }
+
+.absolute {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(255,84,104,.3);
+  border: 2px solid rgb(255,84,104);
+}

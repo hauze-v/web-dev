@@ -85,3 +85,8 @@ There are five types of positioning you should know about:
   Allows you to offset an item from the position in normal flow it would have by default. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label. To do this, we could add the relative rule to our css
 
   In our example, we give our middle paragraph a `position` value of `relative` - this doesn't do anything on its own, so we also add `top` and `left` properties. These serve to move the affected element down and to the right - this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which results in it moving right and down.
+
+--- ABSOLUTE POSITIONING ---
+Used to completely remove an element from normal flow, and place it using offsets from the edges of a containing block.
+
+Here we give our middle paragraph a `position` value of `absolute`, and the same `top` and `left` properties as before.
