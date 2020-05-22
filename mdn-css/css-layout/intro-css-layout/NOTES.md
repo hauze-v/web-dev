@@ -55,3 +55,18 @@ Once you have a grid, you can explicitly place your items on it, rather than rer
 **Note**: These two examples are just a small part of the power of Grid layout; to find out more, see MDN's Grid Layout article.
 
 The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.
+
+## Floats ##
+Floating an element changes the behavior of that element and the block level elements that follow it in a normal flow. The element is moved to the left or right and removed from normal flow, and the surrounding content floats around the floated item.
+
+The `float` property has four possible values:
+  * left - floats the element to the left
+  * right - floats the element to the right
+  * none - specifies no floating at all. This is the default value
+  * inherit - specifies that the value of the float property should be inherited from the element's parent element.
+
+In our example we float a <div> left, and give it a `margin` on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.
+
+**Note**: Floats are fully explained in our lesson on *float & clear* properties. Prior to techniques such as Flexbox and Grid layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on legacy layout methods.
+
+## Positioning techniques ##

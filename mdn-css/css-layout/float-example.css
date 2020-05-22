@@ -1,0 +1,17 @@
+/* float example */
+body {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.box {
+  float: left;
+  margin-right: 30px;
+  width: 150px;
+  height: 150px;
+  background-color: lightgreen;
+  border: 5px solid lightblue;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
