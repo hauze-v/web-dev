@@ -28,3 +28,13 @@ p {
   background: rgba(255,84,104,.3);
   border: 2px solid rgb(255,84,104);
 }
+
+.fixed {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: rgba(255,84,104,.3);
+  border: 2px solid rgb(255,84,104);
+  border-radius: 5px;
+  padding: 10px;
+}

@@ -90,3 +90,10 @@ There are five types of positioning you should know about:
 Used to completely remove an element from normal flow, and place it using offsets from the edges of a containing block.
 
 Here we give our middle paragraph a `position` value of `absolute`, and the same `top` and `left` properties as before.
+
+--- FIXED POSITIONING ---
+Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. As the item remains fixed in relation to the viewport we can create effects such as a menu which remains fixed as the page scrolls beneath it.
+
+In this example, our HTML is three paragraphs of text, in order that we can cause the page to scroll, and a box to which we will give `position: fixed`.
+
+--- STICKY POSITIONING ---
