@@ -97,3 +97,4 @@ Fixed positioning removes our element from document flow in the same way as abso
 In this example, our HTML is three paragraphs of text, in order that we can cause the page to scroll, and a box to which we will give `position: fixed`.
 
 --- STICKY POSITIONING ---
+Sticky positioning is the final positioning method that we have at our disposal. It mixes the default static positioning with fixed positioning. When an item has `position: sticky` it will scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had a `position: fixed` applied.

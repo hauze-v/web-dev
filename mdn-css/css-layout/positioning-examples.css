@@ -38,3 +38,13 @@ p {
   border-radius: 5px;
   padding: 10px;
 }
+
+.sticky {
+  background: rgba(255,84,104,.3);
+  border: 2px solid rgb(255,84,104);
+  border-radius: 5px;
+  padding: 10px;
+  position: sticky;
+  top: 30px;
+  left: 30x;
+}
