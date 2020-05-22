@@ -70,3 +70,18 @@ In our example we float a <div> left, and give it a `margin` on the right to pus
 **Note**: Floats are fully explained in our lesson on *float & clear* properties. Prior to techniques such as Flexbox and Grid layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on legacy layout methods.
 
 ## Positioning techniques ##
+Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn't a method for creating your main page layouts, it's more about managing and fine-tuning the position of specific items on the page.
+
+There are five types of positioning you should know about: 
+  * **Static positioning** is the default that every element gets - it just means "put the element inot its normal position in the document layout flow - nothing special to see here."
+  * **Relative positioning** allows you to modify an element's position on the page, moving it relative to its position in normal flow - including making it overlap other elements on the page.
+  * **Absolute positioningg** moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layout. From there, you can fix it in a position relative to the edges of the page's <html> element. This is useful for creating complex layout effects such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.
+  * **Fixed positioning** is very similar to absolute positioning, except that is fixes an element relative to the browser viewport not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
+  * **Sticky positioning** is a newer positioning method which makes an element act like `position: static` until it hits a defined offset from the viewport, at which point it acts like `position: fixed`.
+
+  To provide familiarity with these layout techniques, we'll show you a couple quick examples. Our examples will all feature the same HTML.
+
+  --- RELATIVE POSITIONING ---
+  Allows you to offset an item from the position in normal flow it would have by default. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label. To do this, we could add the relative rule to our css
+
+  In our example, we give our middle paragraph a `position` value of `relative` - this doesn't do anything on its own, so we also add `top` and `left` properties. These serve to move the affected element down and to the right - this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which results in it moving right and down.
