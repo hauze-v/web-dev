@@ -98,3 +98,14 @@ In this example, our HTML is three paragraphs of text, in order that we can caus
 
 --- STICKY POSITIONING ---
 Sticky positioning is the final positioning method that we have at our disposal. It mixes the default static positioning with fixed positioning. When an item has `position: sticky` it will scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had a `position: fixed` applied.
+
+## Table layout ##
+HTML tables are fine for displaying tabular data, but many years ago - before even basic CSS was supported reliably across browsers - web developers used to also use tables for entire web page layouts - putting their headers, footers, different columns, etc. in various table rows and columns. This worked at the time, but has many problems - table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g. screen reader users have problems navigating table layout webpages).
+
+The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These properties can be used to lay out elements that are not tables, a use which is sometimes described as "using CSS tables".
+
+Let's use an example. First some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a <div>, for layout purposes.
+
+Now, the CSS is mostly ordinary, except for the uses of the `display` property. The <form>, <div>s, and <label>s and <input>s have been told to display like a table, table rows, and table cells respectively. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.
+
+## Multi-column Layout ##
