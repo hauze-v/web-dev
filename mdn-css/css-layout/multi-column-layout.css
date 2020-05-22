@@ -1,0 +1,10 @@
+/* Multi-column layout example */
+body {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+.container {
+  column-width: 200px;
+}

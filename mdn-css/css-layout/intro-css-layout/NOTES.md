@@ -109,3 +109,8 @@ Let's use an example. First some simple markup that creates an HTML form. Each i
 Now, the CSS is mostly ordinary, except for the uses of the `display` property. The <form>, <div>s, and <label>s and <input>s have been told to display like a table, table rows, and table cells respectively. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.
 
 ## Multi-column Layout ##
+The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don't want to force users to scroll up and down, arranging content into columns ca be a useful technique.
+
+To turn a block into a multicol container we use either the `column-count` property, which tells the browser how many columns we would like to have, or the `column-width` property, which tells the browser to fill the contianer with as many columns of at least that width.
+
+Check out our example. We are using a `column-width: 200px;` on that container, causing the browser to create as many 200-pixel columns as will fit in the container and then share the remaining space between the created columns.
