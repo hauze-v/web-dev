@@ -1,0 +1,4 @@
+# Normal Flow #
+Element's on a webpage lay out in the normal flow, if you have not applied any CSS to change the way they behave. And, as we began to discover, you can change how elements behave either by adjusting their position in that normal flow, or removing them from it altogether.
+
+Starting with a well-structured document that is readable in normal flow is the best way to begin any webpage. it ensures that youru content is readable, even if the user is using a very limited browser or a device such as a screen reader that reads out the content of the page. In addition, as normal flow is designed to make a readable document, by starting in this way you are working with the document rather than fighting against it as you make changes to the layout.
