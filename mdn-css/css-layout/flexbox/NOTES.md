@@ -96,3 +96,36 @@ article:nth-of-type(3) {
 This basically takes "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." 
 
 The real value of flexbox can be seen in its flexibility/responsiveness - if you resize the browser window, or add another <article> element, the layout continues to work just fine.
+
+## flex: shorthand versus longhand ##
+`flex` is a shorthand property that can specify up to three different values:
+  * The unitless proportion value we discussed above. This can be specified individually using the `flex-grow` longhand property.
+  * A second unitless proportion value - `flex-shrink` - that comes into play when the flex items are overflowing their container. This specifies how much of the overflowing amount is taken away from each flex item's size, to stop them overflowing their container. This is quite an advanced flexbox feature, and we won't be covering it any further in this article.
+  * The minimum size value we discussed above. This can be specified individually using the `flex-basis` longhand value.
+
+We'd advise against using the longhand flex properties unless you really have to (for example to override something previously set). They lead to a lot of extra code being written, and they can be somewhat confusing.
+
+## Horizontal and vertical alignment ##
+ You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example - flex-align0.html.
+
+ After adding the CSS for the div, you'll see the buttons are now nicely centered, horizontally and vertically. We've done this via two new properties.
+
+ `align-items` controls where the flex items sit on the cross axis.
+ 
+  * By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items. This is how our first example got equal height columns by default.
+  * The `center` value that we used in our code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.
+  * You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively.
+
+You can override the `align-items` behavior for individual flex items by applying the `align-self` property to them. For example, try adding the following to your CSS:
+
+button:first-child {
+  align-self: flex-end;
+}
+
+`justify-content` controls where the flex items sit on the main axis.
+  * The default value is `flex-start`, which makes all the items sit at the start of the main axis.
+  * You can use `flex-end` to make them sit at the end.
+  * `center` is also a value for `justify-content`, and will make the flex items sit in the center of the main axis.
+  * The value we've used above, `space-around`, is useful - it distributes all the items evenly along the main axis, with a bit of space left at either end.
+
+We encourage you to play with these values to see how they work before you continue.
