@@ -129,3 +129,28 @@ button:first-child {
   * The value we've used above, `space-around`, is useful - it distributes all the items evenly along the main axis, with a bit of space left at either end.
 
 We encourage you to play with these values to see how they work before you continue.
+
+## Ordering flex items ##
+Flexbox also have a feature for changing the layout order of flex items, without affecting the source order. This is another thing that is impossible to do with traditional layout methods.
+
+The code for this is simple: try adding the following CSS to your button example code:
+
+button:first-child {
+  order: 1;
+}
+
+Refresh and you'll see that the "Smile" button has moved to the end of the main axis. Let's talk about how this works in a bit more detail:
+
+  * By default, all flex items have an `order` value of 0.
+  * Flex items with higher order values set on them will appear later in the display order than items with lower order values.
+  * Flex items with the same order value will appear in their source code order. So if you have four items with order values 2, 1, 1, and 0 on them respetively, their display order would be 4th, 2nd, 3rd, and then 1st.
+  * The 3rd item appears after the 2nd because it has the same order value and is after it in the source code
+
+You can set negative order values to make items appear earlier than items with 0 set. For example, you could make the "Blush" button appear at the start of the main axis using the following rule:
+
+button:last-child {
+  order: -1;
+}
+
+
+## Nested flex boxes ##

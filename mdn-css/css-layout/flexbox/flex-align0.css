@@ -29,3 +29,13 @@ div {
 /* button:first-child {
   align-self: flex-end;
 } */
+
+/* Ordering flex items */
+
+button:first-child {
+  order: 1;
+}
+
+button:last-child {
+  order: -1;
+}
