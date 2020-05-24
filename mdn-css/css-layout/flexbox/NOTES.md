@@ -40,7 +40,7 @@ You'll see this puts the items back in column layout, much like they were before
 **Note**: You can also lay out flex itemsin a reverse direction using the `row-reverse` and `column-reverse` values. Experiment with these values too!
 
 ## Wrapping ##
-One issues that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout.
+One issues that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout.i
 
 Have a look at the flexbox-wrap0.html example.
 
@@ -55,3 +55,44 @@ We now have multiple rows - as many flexbox children are fitted onto each row as
 But there's more we can do here. Try changing your `flex-direction` property value to `row-reverse` - now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
 
 ## flex-flow shorthand ##
+At this point it's worth noting that a shorthand exists for `flex-direction` and `flex-wrap` - called `flex-flow`. So for our example, we can replace: 
+
+`flex-direction: row;`
+`flex-wrap: wrap;`
+
+with
+
+`flex-flow: row wrap;`
+
+## Flexible sizing of flex items ##
+Let's return to our first example, and look at how we can control what proportion of space flex items take up compared to the other flex items. 
+
+First add the following rule to your CSS:
+
+article {
+  flex: 1;
+}
+
+This is a unitless proportion value that dictates how much of the available space along the main axis each flex item will take up compared to other flex items. In this case, we are giving each <article> element the same value ( a value of 1), which means they will all take up an equal amount of the spare space left after things like padding and margins have been set. It's relative to other flex items, meaning that giving each flex item a value of 40000 would have the exact same effect.
+
+Now add the following rule below the previous one:
+
+article:nth-oftype(3) {
+  flex: 2;
+}
+
+Now you should see that the third <article> takes up twice as much of the available width as the other two - there are now four proportion units available in total (since 1+1+2 = 4). The first two flex items have one unit each so they take 1/4 of the available space each. The third one has two units, so it takes up 2/4 of the available space (or one-half).
+
+You can also specify a minimum size value inside the flex value. Try updating your existing article rules with: 
+
+article {
+  flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+  flex: 2 200px;
+}
+
+This basically takes "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." 
+
+The real value of flexbox can be seen in its flexibility/responsiveness - if you resize the browser window, or add another <article> element, the layout continues to work just fine.
