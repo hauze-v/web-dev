@@ -40,3 +40,18 @@ You'll see this puts the items back in column layout, much like they were before
 **Note**: You can also lay out flex itemsin a reverse direction using the `row-reverse` and `column-reverse` values. Experiment with these values too!
 
 ## Wrapping ##
+One issues that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout.
+
+Have a look at the flexbox-wrap0.html example.
+
+You can see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your <section> rule:
+  `flex-wrap: wrap`
+
+Also, add the following declaration to your <article> rule:
+  `flex: 200px`
+
+We now have multiple rows - as many flexbox children are fitted onto each row as makes sense, and any overflowis moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least 200px wide; we'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
+
+But there's more we can do here. Try changing your `flex-direction` property value to `row-reverse` - now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
+
+## flex-flow shorthand ##
