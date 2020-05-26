@@ -151,6 +151,3 @@ You can set negative order values to make items appear earlier than items with 0
 button:last-child {
   order: -1;
 }
-
-
-## Nested flex boxes ##
