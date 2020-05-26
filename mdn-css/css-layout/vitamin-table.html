@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Hauze">
+  <title>Vitamin Table</title>
+
+  <style>
+    /* spacing */
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      border: 3px solid lightseagreen;
+    }
+    
+    caption {
+      padding: 10px;
+    }
+
+    thead th:nth-child(1) {
+      width: 35%;
+    }
+
+    thead th:nth-child(2) {
+      width: 15%;
+    }
+
+    thead th:nth-child(3) {
+      width: 25%;
+    }
+
+    thead th:nth-child(4) {
+      width: 25%;
+    }
+
+    tbody tr td:nth-child(4) {
+      text-align: left;
+    }
+
+    th, td {
+      padding: 20px;
+    }
+
+    /* typography */
+
+    html {
+      font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    }
+
+    th {
+      letter-spacing: 2px;
+    }
+
+    td {
+      letter-spacing: 1px;
+    }
+
+    thead th {
+      text-align: left;
+    }
+
+    /* zebra stripes */
+    tbody tr:nth-child(odd) {
+      background-color: lightcoral;
+      opacity: 0.8;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: lightskyblue;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  
+  <table>
+    <caption>A summary of Adam's Monthly Vitamins</caption>
+    <thead>
+      <tr>
+        <th>Vitamins</th>
+        <th>Pill Count</th>
+        <th>Dose</th>
+        <th>Cost/Month</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vitamin D3</td>
+        <td>360</td>
+        <td>1 per day</td>
+        <td>$0.80</td>
+      </tr>
+      <tr>
+        <td>Vitamin C</td>
+        <td>250</td>
+        <td>2 per day</td>
+        <td>$8.90</td>
+      </tr>
+      <tr>
+        <td>O.N.E Multivitamin</td>
+        <td>60</td>
+        <td>1 per day</td>
+        <td>$17.70</td>
+      </tr>
+      <tr>
+        <td>Zinc</td>
+        <td>60</td>
+        <td>1 per day</td>
+        <td>$5.5</td>
+      </tr>
+      <tr>
+        <td>Quercetin</td>
+        <td>120</td>
+        <td>1 per day</td>
+        <td>$9.5</td>
+      </tr>
+      <tr>
+        <td>Omega 3</td>
+        <td>320</td>
+        <td>6 per day</td>
+        <td>$15.78</td>
+      </tr>
+      <tr>
+        <td>Vitamin K2</td>
+        <td>100</td>
+        <td>2 per week</td>
+        <td>$0.92</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
