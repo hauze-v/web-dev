@@ -160,3 +160,28 @@ footer {
 }
 
 **Note**: You can also use the value -1 to target the end column or row line, and count inwards from the end using negative values. However, this only works for the explicit grid. The value -1 will not target the end line of the implicit grid.
+
+## Positioning with grid-template-areas ##
+An alternative way to place items on your grid is to use the `grid-tempalte-areas` property and giving the various elements of your design a name.
+
+Remove the line-based positioning from the last example (or copy a new one), and add the following CSS.
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header" 
+    "sidebar content" 
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
+
+The rules for `grid-template-areas` are as follows:
+  * You need to have every cell of the grid filled
+  * To span across two cells, repeat the name
+  * To leave a cell empty, use a . (period)
+  * Areas must be rerctangular - you can't have an L-shaped area for example
+  * Areas can't be repeated in different locations.
+
+You can play around with our layout, changing the footer to only sit underneath the content and the sidebar to span all the way down for example. This is a very nice way to describe a layout as it is obvious from the CSS exactly what's happening.
+
