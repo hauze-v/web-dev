@@ -48,3 +48,76 @@ The first track now gets `2fr` of the available space and the other two tracks g
 **Note**: The `fr` unit distributes *available* space, not *all* space. Therefore if one of your tracks has something large inside it there will be less free space to share out.
 
 --- GAPS BETWEEN TRACKS ---
+To create gaps between tracks we use the properties `grid-column-gap` for gaps between columns and `grid-row-gap` for gaps between rows, and `grid-gap` to set both at once.
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+These gaps can be any length unit or a percentage, but not an `fr` unit.
+
+**Note**: The *gap properties used to be prefixed by `grid-`, but this has been changed in the spec, as the intention is to make them usable in multiple layout methods. The prefixed versions will be maintained as an alias so it's safe to use for some time. To be on the safe side, you could double up and add both properties to make your code more bulletproof.
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+--- REPEATING TRACK LISTINGS ---
+You ucan repeat all, or a section of, your track listing using repeat notation. Change your track listing to the following:
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+The first value passed to the repeat function is how many times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.
+
+--- THE IMPLICIT AND EXPLICIT GRID ---
+We have only specified column tracks so far, and yet rows are being created to hold our content. This is an example of the explicit versus the implicit grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid is created when content is placed outsite of that grid - such as into our rows. The explicit and implicit grids are analogous to the main and cross flexbox axes.
+
+By default, tracks created in the implicit grid are auto sized, which in general means that they are large enough to fit their content. If you wish to give implicit grid tracks a size you can use ethe `grid-auto-rows` and `grid-auto-columns` properties. If you add a `grid-auto-rows` with a value of 100px to your CSS, you will see that those created rows are now 100pixels tall.
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+--- THE MINMAX() FUNCTION ---
+Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100pixels, in which case it would cause an overflow. It might be better to have tracks that are *at least* 100pixels tall and can still expand if more content gets into them. A fairly basic fact about the web is that you never really know how tall something is going to be; additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
+
+The `minmax()` function lets us set a minimum and maximum size for a track, for example `minmax(100px, auto)`. The minimum size is 100pixels, but the maximum is auto, which will expand to fit the content. Try changing `grid-auto-rows` to use a minmax value:
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+If you add extra content you'll see that the track expands to allow it to fit. Note that the expansion happens right along the row.
+
+--- AS MANY COLUMNS AS WILL FIT ---
+We can combine some of the things we have learned about track listing, repeat notation, and `minmax()` to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using `repeat()` notation, but instead of passing in a number, pass in the keyword `auto-fill`. For the second parameter of the function we use `minmax()`, with a minimum value equal to the minimum track size that we would like to have, and a maximum of `1fr`.
+
+Try this in your file now, using the below CSS:
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+This works because grid is creating as many 200 pixel columns as will fit into the container, then sharing whatever space is leftover between all of the columns - the maximum is `1fr` which, as we already know, distributes space evenly between tracks.
