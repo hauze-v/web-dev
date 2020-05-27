@@ -121,3 +121,42 @@ Try this in your file now, using the below CSS:
 }
 
 This works because grid is creating as many 200 pixel columns as will fit into the container, then sharing whatever space is leftover between all of the columns - the maximum is `1fr` which, as we already know, distributes space evenly between tracks.
+
+## Line-based placement ##
+We now move on from creating a grid, to placing things on the grid. Our grid always has lines, which lines start at 1 and relate to the Writing Mode of the document. Therefore, in English, column line 1 is on the left hand side of the grid and row line 1 at the top. 
+
+We can place things according to these lines by specifying the start and end line. We do this using the following properties: 
+  * `grid-column-start`
+  * `grid-column-end`
+  * `grid-row-start`
+  * `grid-row-end`
+
+These properties can all have a line number as the value. You can also use the shorthand properties:
+  * `grid-column`
+  * `grid-row`
+
+Take a look at the grid-lines.html example. It has grid already defined, and a simple article outlined. You can see that auto-placement is placing items onto each cell of the grid that we've created.
+
+We're going to instead place all of the elements for our site on the grid, using the grid lines. Add the following rules to the bottom of your CSS.
+
+header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+article {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+aside {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+footer {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+**Note**: You can also use the value -1 to target the end column or row line, and count inwards from the end using negative values. However, this only works for the explicit grid. The value -1 will not target the end line of the implicit grid.
