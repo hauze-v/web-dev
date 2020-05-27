@@ -185,3 +185,11 @@ The rules for `grid-template-areas` are as follows:
 
 You can play around with our layout, changing the footer to only sit underneath the content and the sidebar to span all the way down for example. This is a very nice way to describe a layout as it is obvious from the CSS exactly what's happening.
 
+## A CSS Grid, grid framework ##
+Grid "frameworks" tend to be based around 12 or 16 column grids and with CSS Grid, you don't need any third party tool to give you such a framework - it's already there in the spec.
+
+Take a look out our example, titled: grid-framework.html
+
+This has a container with a 12 column grid defined, and the same markup as we used in the previous two examples. We can now use line-based placement to place our content on the 12 column grid.
+
+
