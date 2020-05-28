@@ -16,6 +16,26 @@ body {
 
 .grid {
   display: grid;
+  grid-template-areas: 
+    "one one"
+    "two three"
+    ". four";
   grid-template-columns: 1fr 2fr;
   gap: 10px;
+}
+
+.grid > div:nth-child(1) {
+  grid-area: one;
+}
+
+.grid > div:nth-child(2) {
+  grid-area: two;
+}
+
+.grid > div:nth-child(3) {
+  grid-area: three;
+}
+
+.grid > div:nth-child(4) {
+  grid-area: four;
 }
