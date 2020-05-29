@@ -13,3 +13,24 @@ Floats have commonly been used to create entire web site layouts featuring multi
 In this article, we'll just concentrate on the proper use of floats.
 
 ## A simple float example ##
+Let's explore how to use floats. We'll start with a really simple example involving floating a block of text around an element.
+
+First, we'll start off with some simple HTML - add the following to your HTML body, removing anything that was inside there before:
+
+So, let's think about how the float works - the element with the float set on it (the <div> element in this case) is taken out of the normal layout flow of the document and stuck to the left-hand side of its parent container (<body>, in this case). Any content that comes below the floated element in the normal layout flow will now wrap around it, filling up the space to the right-hand side of it as far up as the top of the floated element. There, it will stop.
+
+Floating the content to the right has exactly the same effect, but in reverse - the floated element will stick to the right, and the content will wrap around it to the left.
+
+While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow, and the boxes of the following items actually run behind the float. You can demostrate this by making some changes to your example.
+
+Add a class of `special` to the first paragraph of text, the one immediately following the floated box, then in your CSS add the following rules. These will give our following paragraph a background color. 
+
+.special {
+  background-color: rgb(79,185,227);
+  padding: 10px;
+  color: #fff;
+}
+
+Now, to make the effect easier to see, change the `margin-right` on your float to `margin`, so you get space all around the float. You will be able to see the background of on the paragraph running right underneath the floated box.
+
+The line boxes of our following element have been shortended so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
