@@ -62,3 +62,4 @@ Once again, this is because the float has been taken out of normal flow. Clearin
 The modern way of solving this problem is to use the value of `flow-root` of the `display` property. This exists only to create a BFC without using hacks - there will be no unintended consequences when you use it.
 
 Add `display: flow-root` to your .wrapper rule and the box should clear the floated div.
+
