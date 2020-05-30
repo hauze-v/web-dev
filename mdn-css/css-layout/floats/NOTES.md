@@ -34,3 +34,19 @@ Add a class of `special` to the first paragraph of text, the one immediately fol
 Now, to make the effect easier to see, change the `margin-right` on your float to `margin`, so you get space all around the float. You will be able to see the background of on the paragraph running right underneath the floated box.
 
 The line boxes of our following element have been shortended so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
+
+## Clearing floats ##
+We have seen that the float is removed from normal flow and that other elements will display beside it, therefore if we want to stop the following element from moving up we need to clear it; this is achieved with the `clear` property.
+
+In your HTML from the previous example, add a class of `cleared` to the second paragraph below the floated item. Then add the following to your CSS:
+
+.cleared {
+  clear: left;
+}
+
+You should now see that the second paragraph clears the floated element and no longer comes up alongside it. The `clear` property accepts the following values: 
+  * `left`: clear items floated to the left
+  * `right`: clear items floated to the right
+  * `both`: clear any floated items, left or right
+
+## Clearing boxes wrapped around a float ##
