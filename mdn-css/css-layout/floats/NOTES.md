@@ -50,3 +50,15 @@ You should now see that the second paragraph clears the floated element and no l
   * `both`: clear any floated items, left or right
 
 ## Clearing boxes wrapped around a float ##
+You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around both elements. 
+
+Let's use a similar but new example called clearing-boxes.html
+
+You'll see that, just like in the example where we put a background color on the paragraph, the background color runs behind the float.
+
+Once again, this is because the float has been taken out of normal flow. Clearing the following element doesn't help with this box clearing problem, where you want the bottom of the box to wrap the floated item and wrapping content even if the content is shorter. There are three potential ways to deal with this, two of which work in all browsers - yet are slightly hacky - and a third new way that deals with this situation properly.
+
+--- THE MODERN WAY ----
+The modern way of solving this problem is to use the value of `flow-root` of the `display` property. This exists only to create a BFC without using hacks - there will be no unintended consequences when you use it.
+
+Add `display: flow-root` to your .wrapper rule and the box should clear the floated div.
