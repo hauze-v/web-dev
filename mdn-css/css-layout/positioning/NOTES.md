@@ -114,3 +114,12 @@ If you save and refresh now, you'll see a fun little effect whereby the heading 
 p:nth-of-type(1) {
   margin-top: 60px;
 }
+
+--- POSITION: STICKY ---
+There's another position value available called `position: sticky`, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position, which allows a positioned element to act like it is relatively positioned until it is scrolled to a certain threshold point (e.g. 10px from the top fo the viewport), after which it becomes fixed. This can be used to cause a navigation bar to scroll with the page until a certain point, and then stick to the top of the page.
+
+.positioned {
+  position: sticky;
+  top: 30px;
+  left: 30px;
+}
