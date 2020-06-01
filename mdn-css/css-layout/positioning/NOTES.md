@@ -59,4 +59,58 @@ To demonstrate this, add the following declaration to your `body` rule:
 
 `position: relative;`
 
-You'll see that the absolutely positioned element now sits relative to the <body> element. 
+You'll see that the absolutely positioned element now sits relative to the <body> element.
+
+--- INTRODUCING Z-INDEX ---
+All this absolute positioning is good fun, but there is another thing we haven't considered yet - when elements start to overlap, what determines which elements appear on top of which other elements?
+
+Try adding the following to your CSS, to make the first paragraph absolutely positioned too: 
+
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+}
+
+Positioned elements later in the source order win over positioned elements earlier in the source order.
+
+You can change the stacking order by using `z-index` property,. Webpages have a z-axis: an imaginary line that runs from the surface of your screen, towards your face. `z-index` values affect where positioned elements sit on that axis; positive values move them higher up the stack, and negative values move them lower down the stack. By default, positioned elements all have a z-index of `auto`, which is effectively 0.
+
+To change the stacking order, try adding the following declaration to your `p:nth-of-type(1)` rule: 
+
+`z-index: 1;`
+
+Note that the `z-index` only accepts unitless index values; you can't specify that you want one element to be 23pixels up the z-axis it doesn't work like that. Higher values will go above lower values, and it is up to you what values you use.
+
+--- FIXED POSITIONING ---
+Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (or the document's root element if there isn't one, i.e. the <html> element), **fixed positioning** fixes an element in place relative to the browser viewport itself. This means that you can create UI items thar are fixed in place, like persisting navigation menus.
+
+Let's put together a simple example to show what we mean. First of all, delete the existing `p:nth-of-type(1)` and `.positioned` rules (actually let's just make a new example file).
+
+Now, update the body rule to remove the `position: relative;` declaration and add a fixed height, like so: 
+
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+
+Now we're going to give the <h1> element `position: fixed;` and get it to sit at the top of the viewport. Add the following to your CSS:
+
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin-top: 0;
+  background: white;
+  padding: 10px;
+}
+
+The `top: 0;` is required to make it stick to the top of the screen. We give the heading the same width as the content column and then give it a white background and some padding and margin, so the content won't be visible underneath it.
+
+If you save and refresh now, you'll see a fun little effect whereby the heading stays fixed, and the content appears to scroll up and disappear underneath it. But we could improve this more - at the moment some of the content starts off underneath the heading. This is becausue the positioned heading no longer appears in the document flow, so the rest of the content moves up to claim the empty space. We need to move it all down a bit; we can do this by setting some top margin on the first paragraph:
+
+p:nth-of-type(1) {
+  margin-top: 60px;
+}
