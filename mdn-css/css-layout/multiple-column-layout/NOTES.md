@@ -44,3 +44,7 @@ The property accepts any length unit. Now add a rule between the columns, with `
 Something to take note of, is that the rule does not take up any width of its own. It lies across the gap you created with `column-gap`. To make more space on either side of the rule, you'll need to increase the `column-gap` size.
 
 ## Spanning columns ##
+You can cause an element to span across all of the columns. In this case the content breaks when the spanning element is introduced and continues below creating a new set of column boxes. To cause an element to span all of the columns use the `column-span` property set to `all`.
+
+**Note**: It isn't possible to cause an element to span some columns. The property can only have the value of `none` (which is the default) or `all`.
+
