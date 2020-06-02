@@ -22,3 +22,25 @@ Change your CSS to use `column-width` as follows:
 The browser will now give you as many columns as it can of the size that you specify; any remaining space is then shared between the existing columns. This means that you will not get exactly the width that you specify, unless your container is exactly divisble by that width.
 
 ## Styling the columns ##
+The columns created by multicol cannot be styled individually. There is no way to make one column bigger than other columns, or to change the background or text color of a single column. You have two opportunities to change the way that columns display: 
+  * Changing the size of the gap between columns using the `column-gap`
+  * Adding a rule between columns with `column-rule`.
+
+Using your example above, change the size of the gap by adding a `column-gap` property: 
+
+.container {
+  column-width: 200px;
+  column-gap: 20px;
+}
+
+The property accepts any length unit. Now add a rule between the columns, with `column-rule`. In a similar way to the `border` property that you encountered in previous lessons, `column-rule` is a shorthand for `column-rule-color`, `column-rule-style`, and `column-rule-width`, and accepts the same values as border.
+
+.container {
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 4px dotted rgb(79,185,227);
+}
+
+Something to take note of, is that the rule does not take up any width of its own. It lies across the gap you created with `column-gap`. To make more space on either side of the rule, you'll need to increase the `column-gap` size.
+
+## Spanning columns ##
