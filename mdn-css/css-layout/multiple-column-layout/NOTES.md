@@ -48,3 +48,12 @@ You can cause an element to span across all of the columns. In this case the con
 
 **Note**: It isn't possible to cause an element to span some columns. The property can only have the value of `none` (which is the default) or `all`.
 
+## Columns and fragmentation ##
+The content of a multi-column layout is fragmented. It essentially behaves the same way as content behaves in paged media - such as when you print a webpage. When you turn your content into a multicol container it is fragemented into columns, and the content breaks to allow this to happen.
+
+Sometimes, this breaking will happen in places that lead to a poor reading experience. In our example, we've used multicol to lay out a series of boxes, each of which have a heading and some text inside. The heading becomes separated from the text if the columns fragment between the two.
+
+To control this behavior we can use properties from the CSS fragmentation specification. This gives us properties to control breaking of content in multicol and in paged media. For example, add the property `break-inside` with a value of `avoid` to the rules for .card. This is the container for the heading and text, and therefore we do not want to fragment this box.
+
+At the present time it's also worth adding the older property `page-break-inside: avoid` for best browser support.
+
