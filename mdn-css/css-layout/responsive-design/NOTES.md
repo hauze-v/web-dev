@@ -8,3 +8,7 @@ At one point in history you had two options when designiing a website:
 
   * You could create a *liquid* site, which would stretch to fill the browser window
   * or a *fixed width* site, which would be fixed size in pixels.
+
+As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site, with a different URL (often sometimes like m.example.com, or example.mobl). This meant that two separate versions of the site had to be developed and kept up-to-date.
+
+In addition, these mobile sites often offered a very cut down experience. As mobile devices become more powerful and able to display full websites, this was frustrating to mobile users who found themselves trapped in the site's mobile version and unable to access information they knew was on the full-featured desktop version of the site.
