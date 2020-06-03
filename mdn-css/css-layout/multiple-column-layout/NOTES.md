@@ -5,7 +5,7 @@ Often referred to as *multicol*.
 
 Our example and starting point contains some very simple HTML; a wrapper with a class of `container` inside which is a heading and some paragraphs.
 
-The <div> with a class of container will become out multicol container. We switch on multicol by using one of two properties `column-count` or `column-width`. The `column-count` property will create as many columns as the value you give it, so if you add the following CSS to your style sheet and reload the page, you'll get three columns: 
+The <div> with a class of container will become out multicol container. We switch on multicol by using one of two properties `column-count` or `column-width`. The `column-count` property will create as many columns as the value youf give it, so if you add the following CSS to your style sheet and reload the page, you'll get three columns: 
 
 .container {
   column-count: 3;
