@@ -12,3 +12,9 @@ At one point in history you had two options when designiing a website:
 As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site, with a different URL (often sometimes like m.example.com, or example.mobl). This meant that two separate versions of the site had to be developed and kept up-to-date.
 
 In addition, these mobile sites often offered a very cut down experience. As mobile devices become more powerful and able to display full websites, this was frustrating to mobile users who found themselves trapped in the site's mobile version and unable to access information they knew was on the full-featured desktop version of the site.
+
+## Flexible layout before responsive design ##
+A number of approaches were designed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004, Cameron Adams wrote a post titled Resolution dependent layout, describing a method of creating a design that could adapt to different screen resolutions. The approch required JavaScript to detect the screen resolution and load the correct CSS.
+
+## Responsive Design ##
+Three techniques in combination make up responsive design
