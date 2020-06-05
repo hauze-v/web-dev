@@ -17,4 +17,12 @@ In addition, these mobile sites often offered a very cut down experience. As mob
 A number of approaches were designed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004, Cameron Adams wrote a post titled Resolution dependent layout, describing a method of creating a design that could adapt to different screen resolutions. The approch required JavaScript to detect the screen resolution and load the correct CSS.
 
 ## Responsive Design ##
-Three techniques in combination make up responsive design
+Three techniques in combination make up responsive design: 
+
+1. The first was the idea of fluid grids
+2. The second technique was the idea of fluid images. Using a very simple technique of setting the `max-width` property to 100%, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column becomes wider than the image.
+3. The third key component was the media query. Media queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.
+
+It's important to understand that **responsive web design isn't a separate technology** - it's a term used to describe an approach to web design or a set of best practices, used to create a layout that can *respond* to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites easier.
+
+The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.
