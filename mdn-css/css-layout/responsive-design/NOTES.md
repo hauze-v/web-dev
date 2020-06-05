@@ -26,3 +26,18 @@ Three techniques in combination make up responsive design:
 It's important to understand that **responsive web design isn't a separate technology** - it's a term used to describe an approach to web design or a set of best practices, used to create a layout that can *respond* to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites easier.
 
 The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.
+
+## Media Queries ##
+Responsive design was only able to emerge due to the media query. The Media Queries Level 3 specification became a Candidate Recommendation in 2009, meaning that it was deemed ready for implementation in browsers. Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+
+For example, the following media query tests to see if the current web page is being displayed as scereen media (therefore not printed document) and teh viewport is at least 800 pixels wide. The CSS for the .container selector will only be applied if these two things are true.
+
+@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }
+}
+
+You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as *breakpoints*
+
+A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for larger screens and implement a multiple column layout when you know that you have enough screen width to handle it. This is often described as **mobile first** design.
