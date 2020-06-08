@@ -110,3 +110,39 @@ Responsive images, using the <picture> element and the <img> `srcset` and `sizes
 You can learn more on responsive images in the detailed MDN guide titled, Responsive Images in the Learn HTML section.
 
 ## Responsive typography ##
+An element of responsive design not covered in eariler work was the idea of responsive typography. Essentially, this describes changing font sizes within media queries to reflect lesser or greater amounts of screen real estate.
+
+In this example, we want to set our level 1 heading to be 4rem, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least 1200px.
+
+html {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+--- USING VIEWPORT UNITS FOR RESPONSIVE TYPOGRAPHY ---
+An interesting approach is to use the viewport unit `vw` to enable responsive typography. `1vw` is equal to one percent of the viewport width, meaning that if you set your font size using `vw`, it will always relate to the size of the viewport.
+
+h1 {
+  font-size: 6vw;
+}
+
+The problem with doing your font size this way is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore, you should never set text using viewport units alone**.
+
+There is a solution, and it involves using `calc()`. If you add the `vw` unit to a value set using a fixed size such as `em` or `rem` then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+
+This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually inscreases as you increase the size of the viewport.
+
+## The viewport meta tag ##
