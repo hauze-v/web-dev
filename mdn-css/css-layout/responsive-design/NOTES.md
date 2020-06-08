@@ -96,3 +96,17 @@ In CSS Grid layout the `fr` unit allows the distribution of available space acro
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+## Responsive Images ##
+The simplist approach to responsive images was described in Marcotte's early articles on responsive design. Basically, you would take an image that was at the largest size that might be needed, and scale it down. This is still an approach used today, and in most stylesheets, you will find the following CSS somewhere: 
+
+img {
+  max-width: 100%;
+}
+
+There are obvious downsides to this approach. THe image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth - a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by simply scaling down an image.
+
+Responsive images, using the <picture> element and the <img> `srcset` and `sizes` attributes solve both of these problems. You can provide multiple sizes along with "hints" (meta data that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they're using. 
+
+You can learn more on responsive images in the detailed MDN guide titled, Responsive Images in the Learn HTML section.
+
+## Responsive typography ##
