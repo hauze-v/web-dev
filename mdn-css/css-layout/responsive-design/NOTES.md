@@ -30,7 +30,7 @@ The rest of this article will point you to the various web platform features you
 ## Media Queries ##
 Responsive design was only able to emerge due to the media query. The Media Queries Level 3 specification became a Candidate Recommendation in 2009, meaning that it was deemed ready for implementation in browsers. Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
-For example, the following media query tests to see if the current web page is being displayed as scereen media (therefore not printed document) and teh viewport is at least 800 pixels wide. The CSS for the .container selector will only be applied if these two things are true.
+For example, the following media query tests to see if the current web page is being displayed as scereen media (therefore not printed document) and the viewport is at least 800 pixels wide. The CSS for the .container selector will only be applied if these two things are true.
 
 @media screen and (min-width: 800px) {
   .container {
@@ -41,3 +41,22 @@ For example, the following media query tests to see if the current web page is b
 You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as *breakpoints*
 
 A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for larger screens and implement a multiple column layout when you know that you have enough screen width to handle it. This is often described as **mobile first** design.
+
+## Flexible grids ##
+Responsive sites don't just change their layout between breakpoints, they are built on flexible grids. A flexible grid means that you don't need to target every possible device size that there is, and build a pixel perfect layout for it. That approach would be impossible given the vast number of differently-sized devices that exist, and the fact that on desktop at least, people do not always have their browser window maximized.
+
+By using a flexible grid, you only need to add in a breakpoint and change the design at the point where the content starts to look bad. For example, if the line lengths become unreadably long as the screen size increases, or a box becomes squashed with two words on each line as it narrows.
+
+In the early days of responsive design, our only option for performing layout was to use `floats`. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.
+
+`target / context = result` 
+
+For example, if our target column size is 60 pixels, and the context (container) it's in is 960pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right. 
+
+.col {
+  width: 6.25%; /* 60 / 960 = 0.0625 */
+}
+
+This approach will be found in many places across the web today, and it's documented here in the layout section of our Legacy layout methods article. It's likely you'll come across websites using this approach in your work, so it's worth understanding it, even though you would not build a modern site using a float-based flexible grid.
+
+## Modern layout technologies ##
