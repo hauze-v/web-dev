@@ -60,3 +60,39 @@ For example, if our target column size is 60 pixels, and the context (container)
 This approach will be found in many places across the web today, and it's documented here in the layout section of our Legacy layout methods article. It's likely you'll come across websites using this approach in your work, so it's worth understanding it, even though you would not build a modern site using a float-based flexible grid.
 
 ## Modern layout technologies ##
+Modern layout methods such as Multiple-column layout, Flexbox, and Grid are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
+
+--- MULTICOL ---
+The oldest of these layout methods is multicol - when you specify a `column-count`, this indicates how many columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
+
+.container {
+  column-count: 3;
+}
+
+If you instead specify a `column-width`, you are specifying a *minimum* width. The browser will create as many columns of that width as will comfortably fit into the container, then share out the remaining space between all the columns. Therefore the number of columns will change according to how much space there is.
+
+.container {
+  column-width: 10em;
+}
+
+--- FLEXBOX ---
+In Flexbox, flex items will shrink and distribute space between the items according to the space in their container, as their initial behavior. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them. 
+
+In the example below, the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic Flexbox. 
+
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+--- CSS GRID --- 
+In CSS Grid layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. fr stands for fractional unit. 
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
