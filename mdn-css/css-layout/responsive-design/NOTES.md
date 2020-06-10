@@ -161,3 +161,9 @@ The trouble is that your responsive design with breakpoints and media queries wo
 **So you should *always* include the above line of HTML in the head of your documents**.
 
 There are other settings you can use with the viewport meta tag, however in general the above line is what you will want to use.
+
+## Summary ##
+Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is now essentially just how we build websites by default. Consider the sites that you visit on your phone - it's probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.
+
+It has also become much easier to achieve responsive designs with the help of the layout methods we've learned in these lessons. If you are new to web development today, you have many more tools at your disposal than in the early days of responsive design. It's therefore worth checking the age of any materials you're referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
+
