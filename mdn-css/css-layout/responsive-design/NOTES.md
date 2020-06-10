@@ -146,3 +146,18 @@ h1 {
 This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually inscreases as you increase the size of the viewport.
 
 ## The viewport meta tag ##
+If you look at the HTML source of a responsive page, you'll usually see the following <meta> tag in the <head> of the document.
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">`
+
+This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+
+Why is this needed? Because mobile browsers tend to lie about their viewport width.
+
+This meta tag exists because when the original iPhone launched and people started to view websites on a small phone screen, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 960px, render the page at that width, and show the result as a zoomed-out version of the desktop layout. You will still see this today if you have the misfortune to come across a site that does not have a responsive design.
+
+The trouble is that your responsive design with breakpoints and media queries won't work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, and the viewport is set at 960px, you'll never see your narrow screen layout on mobile. By setting width=device-width you are overriding Apple's default width=960px with the actual width of the device, so you media queries will work as intended.
+
+**So you should *always* include the above line of HTML in the head of your documents**.
+
+There are other settings you can use with the viewport meta tag, however in general the above line is what you will want to use.
