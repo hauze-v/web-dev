@@ -115,4 +115,16 @@ There are now far too many devices, with a huge variety of sizes, to make that f
 
 The "Responsive Design Model" in FireFox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller or larger to see where the content would be improved by adding a media query and tweaking the design.
 
-## Active Learning ##
+## Active Learning: Mobile first responsive design ##
+The best approach to follow is called **mobile first** which entails starting with the smallest viewport and adding layout as the viewport becomes larger.
+
+The view for the very smallest devices is quite often a simple single column of content, much as it appears in normal flow. This means that you probably don't need to do a lot of layout for small devices - order your source well and you will have readable layout by default.
+
+The below walkthrough takes you through this approach with a very simple layout. In a production site  you are likely to have more things to adjust within your media queries, however, the approach would be exactly the same.
+
+--- WALKTHROUGH: A SIMPLE MOBILE-FIRST LAYOUT ---
+This new CSS gives us a two-column layout inside the article, of the article content and related information in the aside element. We have also used flexbox to put the navigation into a row.
+
+Let's continue to exapnd the width until we feel there's enough room for the sidebar to also forma a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the `margin-bottom` on the article in order that the two sidebars align with each other, and we'll add a border to the top of the footer. Typically these small tweaks are the kind of thing you'll do to make the design look good at each breakpoint.
+
+If you look at the final example at different widths you can see how the design responds and works as a single column, two columns, or three columns, depending on the available width. 
