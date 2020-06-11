@@ -128,3 +128,8 @@ This new CSS gives us a two-column layout inside the article, of the article con
 Let's continue to exapnd the width until we feel there's enough room for the sidebar to also forma a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the `margin-bottom` on the article in order that the two sidebars align with each other, and we'll add a border to the top of the footer. Typically these small tweaks are the kind of thing you'll do to make the design look good at each breakpoint.
 
 If you look at the final example at different widths you can see how the design responds and works as a single column, two columns, or three columns, depending on the available width. 
+
+## Do you really need a media query? ##
+Flexbox, Grid, and multi-column layoutu all give you ways to create flexible and even responsive components without the need for a media query. It's always worth considering whether these layout methods can achieve what you want without adding media queries. For example, you might want a set of cards that are at least 200px wide, with as many of these 200px as will fit into the main article. This can be achieved with grid layout, using no media queries at all. 
+
+However, in practice, you'll find that good use of modern layout methods, enhanced with media queries, will give the best results.
