@@ -79,3 +79,33 @@ Also in Level 4 is the `pointer` media feature. This takes three possible values
 Using `pointer` can help you to design better interfaces that respond to the type of interaction a user is having with a screen. For example, you could create larger hit areas if you know that the user is interacting with a device as a touchscreen.
 
 ## More complex media queries ##
+With all of the different possible media queries, you may want to combine them, or create lists of queries - any of which could be matched.
+
+--- "AND" LOGIC IN MEDIA QUERIES ---
+To combine media features you can use `and` in much the same way as we have used and above to combine a media type and feature. For example, we might want to test for a `min-width` or `orientation`. The body text will only be blue if the viewport is at least 400px wide and the device is in landscape mode:
+
+@media screen and (min-width: 400px) and (orientation: landscape) {
+  body {
+    color: blue;
+  }
+}
+
+--- "OR" LOGIC IN MEDIA QUERIES ---
+If you have a set of queries, any of which could match, then you can comma separate these queries. In the below example the text will be blueu if the viewport is at least 400pxs wide OR the device is in landscape mode. If either of these things are true the query matches and the CSS rule applies:
+
+@media screen (min-width: 400px), screen and (orientation: landscape) {
+  body {
+    color: red;
+  }
+}
+
+--- "NOT" LOGIC IN MEDIA QUERIES ---
+You can negate an entire media query by using the `not` operator. This reverse the meaning of the entire media query. Therefore in this next example the text will only be blue if the orientation is portrait:
+
+@media not all and (orientation: landscape) {
+  body {
+    color: blue;
+  }
+}
+
+## How to choose breakpoints ##
