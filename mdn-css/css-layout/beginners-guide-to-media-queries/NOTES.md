@@ -109,3 +109,10 @@ You can negate an entire media query by using the `not` operator. This reverse t
 }
 
 ## How to choose breakpoints ##
+In the early days of responsive design, many designers would attempt to target very specific screen sizes. Lists of the sizes of the screens of popular phones and tablets were published in order that designs could be created to neatly match those viewports.
+
+There are now far too many devices, with a huge variety of sizes, to make that feasible. This means that instead of targeting specific sizes for all designs, a better approach is to change the design at the size where the content starts to break in some way. Perhaps the line lengths become far too long, or a boxed out sidebar gets squashed and hard to read. That's the point at which you want to use a media query to change the design to a better one for the space you have available. This approach means that it doesn't matter what the exact dimensions are of the divce being used, every range is catered for. The point at which a media query is introduced are known as **breakpoints**.
+
+The "Responsive Design Model" in FireFox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller or larger to see where the content would be improved by adding a media query and tweaking the design.
+
+## Active Learning ##
