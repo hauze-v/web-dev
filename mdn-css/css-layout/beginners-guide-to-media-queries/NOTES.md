@@ -133,3 +133,4 @@ If you look at the final example at different widths you can see how the design 
 Flexbox, Grid, and multi-column layoutu all give you ways to create flexible and even responsive components without the need for a media query. It's always worth considering whether these layout methods can achieve what you want without adding media queries. For example, you might want a set of cards that are at least 200px wide, with as many of these 200px as will fit into the main article. This can be achieved with grid layout, using no media queries at all. 
 
 However, in practice, you'll find that good use of modern layout methods, enhanced with media queries, will give the best results.
+
