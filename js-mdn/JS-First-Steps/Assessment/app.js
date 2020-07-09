@@ -9,12 +9,9 @@ function randomValueFromArray(array) {
 
 
 /* STORY VARIABLES */
-// let protagonist = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
-// let location = ["the soup kitchen", "Disneyworld", "the White House"];
-// let crisis = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
-
-// const storyText = `It was 94 fahrenheit outside, so ${randomValueFromArray(protagonist)} went for a walk. When they got to ${randomValueFromArray(location)}, they stared in horror for a few moments, then ${randomValueFromArray(crisis)}. Bob saw the whole thing, but was not surprised - ${randomValueFromArray(protagonist)} weighs 300 pounds, and it was a hot day.`
-// console.log(storyText);
+let protagonist = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+let loc = ["the soup kitchen", "Disneyworld", "the White House"];
+let crisis = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
 
 /* 3. EVENT LISTENER AND FUNCTION DEFINITION */
@@ -22,7 +19,6 @@ function randomValueFromArray(array) {
 randomize.addEventListener('click', result);
 
 function result() {
-
   let name = "Bob"
 
   if (customName.value !== '') {
@@ -34,6 +30,8 @@ function result() {
     let temperature = Math.round(94);
 
   }
+
+  let storyText = `It was 94 fahrenheit outside, so ${randomValueFromArray(protagonist)} went for a walk. When they got to ${randomValueFromArray(location)}, they stared in horror for a few moments, then ${randomValueFromArray(crisis)}. ${name} saw the whole thing, but was not surprised - ${randomValueFromArray(protagonist)} weighs 300 pounds, and it was a hot day.`
 
   story.textContent = storyText;
   story.style.visibility = 'visible';
