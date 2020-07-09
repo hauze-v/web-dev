@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.grid > * {
+  background-color: #4D7298;
+  border: 2px solid #77A6B6;
+  border-radius: .5em;
+  color: #fff;
+  padding: .5em;
+}
